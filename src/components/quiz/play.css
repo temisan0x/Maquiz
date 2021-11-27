@@ -1,0 +1,61 @@
+.backgroundColor {
+    background: #0F2027;  /* fallback for old browsers */
+background: -webkit-linear-gradient(to right, #2C5364, #203A43, #0F2027);  /* Chrome 10-25, Safari 5.1-6 */
+background: linear-gradient(to right, #2C5364, #203A43, #0F2027); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
+    height:100vh;
+    width:80%;
+    margin:50px auto 0 auto;
+    padding: 60px 50px;
+    color: white !important;
+    font-family: 'MillimetreRegular'; 
+}
+
+.lifeline_container {
+    display: flex;
+    justify-content: space-between;
+}
+
+.lifeline {
+    position: relative;
+    top: -3px;
+}
+
+h5{
+    font-size: 1.2rem;
+    margin-top: 50px;
+    margin-bottom: 30px;
+    line-height: 1.5;
+    text-align: center;
+    font-weight: 800;
+}
+
+.options_container {
+    display: inline-block;
+    width: 50%;
+}
+
+.option {
+    background-color: white;
+    border-radius: 30px;
+    color: #ad5389;  /* fallback for old browsers */
+    color: -webkit-linear-gradient(to right, #3c1053, #ad5389);  /* Chrome 10-25, Safari 5.1-6 */
+    color: linear-gradient(to right, #3c1053, #ad5389); 
+    cursor: pointer;
+    margin: 1rem 0.6rem;
+    padding: 0.8rem;
+    transition: 0.3s linear all;
+    text-align: center;
+}
+
+.option:hover {
+    background: #F7971E;  /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, #FFD200, #F7971E);  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, #FFD200, #F7971E); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+}
+
+.button_container {
+    display: flex;
+    justify-content: flex-start;
+    margin:0 auto 1rem auto;
+}

@@ -1,0 +1,28 @@
+*{
+    padding: 0;
+    margin: 0; 
+}
+
+html { 
+    background-image: url('../assets/img/quiz.jpg') no-repeat center center fixed; 
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+}
+
+body {
+    background-image: url('../assets/img/quiz.jpg');
+    background-size: cover;
+    background-position: center;
+    height: 100vh;
+    overflow-y: auto;
+}
+
+.icon {
+    flex-direction:row;
+}
+
+li {
+    list-style-type: none;
+}
