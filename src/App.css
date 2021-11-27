@@ -1,0 +1,214 @@
+.home {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: 'WaltographRegular'; 
+    font-size: 4rem;
+    margin-top:100px;
+}
+
+section {
+    background:rgba(4, 4, 4, 0.482);
+    backdrop-filter: blur(10px);
+    height:80vh;
+    width: 40vw;
+    box-shadow: rgba(48, 49, 50, 0.681) 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 0px 1px 3px 1px;
+    padding-left: 2rem;
+    padding-right: 2rem;
+}
+
+
+h1 {
+    text-align: center;
+    color: #fafafa;
+    font-weight: 900;
+}
+
+@media (max-width: 768px) {
+
+    .home {
+        margin-top:0px;
+    }
+
+    section{
+        background:rgba(4, 4, 4, 0.482);
+        backdrop-filter: blur(10px);
+        height:75vh;
+        width: 100vw;
+        box-shadow: rgba(48, 49, 50, 0.681) 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 0px 1px 3px 1px;
+        padding-left: 2rem;
+        padding-right: 2rem;
+    } 
+    
+    h1 {
+        text-align: center;
+        color: #fafafa;
+        font-weight: 900;
+        margin-top: 40px;
+        font-family: 'WaltographRegular'; 
+        font-size: 4rem;
+    }
+
+    .play-button-container {
+        margin-top: 50px;
+    }
+
+}  
+
+/* button */
+
+.play-button-container {
+    width: 100%;
+}
+
+.cssbuttons-io-button.play-button {
+    text-decoration: none;
+    color: black;
+}
+
+.cssbuttons-io-button {
+background: #FFBB1C;
+color: white;
+font-family: inherit;
+padding: 0.35em;
+padding-left: 1.2em;
+font-size: 17px;
+font-weight: 500;
+border-radius: 0.9em;
+border: none;
+letter-spacing: 0.05em;
+display: flex;
+align-items: center;
+box-shadow: inset 0 0 1.6em -0.6em #714da6;
+overflow: hidden;
+position: relative;
+height: 2.8em;
+padding-right: 3.3em;
+}
+
+.cssbuttons-io-button .icon {
+background: white;
+margin-left: 1em;
+position: absolute;
+display: flex;
+align-items: center;
+justify-content: center;
+height: 2.2em;
+width: 2.2em;
+border-radius: 0.7em;
+box-shadow: 0.1em 0.1em 0.6em 0.2em #7b52b9;
+right: 0.3em;
+transition: all 0.3s;
+}
+
+.cssbuttons-io-button:hover .icon {
+width: calc(100% - 0.6em);
+}
+
+.cssbuttons-io-button .icon svg {
+width: 1.1em;
+transition: transform 0.3s;
+color: #7b52b9;
+}
+
+.cssbuttons-io-button:hover .icon svg {
+transform: translateX(0.1em);
+}
+
+.cssbuttons-io-button:active .icon {
+transform: scale(0.95);
+}
+
+/* auth-container section */
+
+.auth-container {
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    margin-top: 40px;
+}
+
+.auth-buttons {
+    color: #fff;
+    cursor: pointer;
+    font-size: 13px;
+    justify-content: space-evenly;
+}
+
+.auth-buttons {
+position: relative;
+display: block;
+text-decoration: none;
+width: 150px;
+overflow: hidden;
+border-radius: 40px;
+border: none;
+}
+
+.auth-buttons span {
+position: relative;
+color: #fff;
+font-size: 20px;
+font-family: "MillimetreRegular";
+letter-spacing: 8px;
+z-index: 1;
+}
+
+.auth-buttons .liquid {
+position: absolute;
+top: -80px;
+left: 0;
+width: 200px;
+height: 200px;
+background: #4973ff;
+box-shadow: inset 0 0 50px rgba(0, 0, 0, .5);
+transition: .5s;
+}
+
+#auth-register .liquid  {
+    position: absolute;
+    top: -80px;
+    left: 0;
+    width: 200px;
+    height: 200px;
+    background: #BDBDBD;
+    box-shadow: inset 0 0 50px rgba(0, 0, 0, .5);
+    transition: .5s;
+}
+
+.auth-buttons .liquid::after,
+.auth-buttons .liquid::before {
+content: '';
+width: 200%;
+height: 200%;
+position: absolute;
+top: 0;
+left: 50%;
+transform: translate(-50%, -75%);
+background: #fff;
+}
+
+.auth-buttons .liquid::before {
+border-radius: 45%;
+background: rgba(20, 20, 20, 1);
+animation: animate 5s linear infinite;
+}
+
+.auth-buttons .liquid::after {
+border-radius: 40%;
+background: rgba(20, 20, 20, .5);
+animation: animate 10s linear infinite;
+}
+
+.auth-buttons:hover .liquid {
+top: -120px;
+}
+
+@keyframes animate {
+0% {
+    transform: translate(-50%, -75%) rotate(0deg);
+}
+
+100% {
+    transform: translate(-50%, -75%) rotate(360deg);
+}}
