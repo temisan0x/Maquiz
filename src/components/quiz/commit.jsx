@@ -6,8 +6,6 @@ const commit = props => {
         <div>
             git remote add origin https://github.com/heytemisan/Maquiz.git
             git branch -M main
-           
-          
         </div>
     )
 }

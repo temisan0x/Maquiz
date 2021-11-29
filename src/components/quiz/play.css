@@ -58,4 +58,6 @@ h5{
     display: flex;
     justify-content: flex-start;
     margin:0 auto 1rem auto;
+    transition: 0.2s linear all;
 }
+
