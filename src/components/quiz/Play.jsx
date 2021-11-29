@@ -65,28 +65,28 @@ class Play extends Component {
         }
     };
 
-    handleOptionClick = (e)=> {
-        if(e.target.innerHTML.toLowerCase() === this.state.answer.toLowerCase()){
-            setTimeout(()=> {
-                document.getElementById('correct_sound').play();
-                this.correctAnswers();
-            }, 500)
-            
-        } else {
-            setTimeout(()=>{
-                document.getElementById('wrong_sound').play();
-                this.wrongAnswers();
-            })        
+    handleNextButtonClick = () => {
+        this.playButtonSound();
+        if (this.state.nextQuestion !== undefined) {
+            this.setState(prevState => ({
+                currentQuestionIndex : prevState.currentQuestionIndex + 1
+            }), () => {
+                this.displayQuestion(this.state.state, this.state.currentQuestion, this.state.nextQuestion, this.state.previousQuestion);
+            });
         }
     }
 
-    handleButtonClick = (e)=> {
-        this.playButtonSound();
+    handleButtonClick = (e) => {
+        switch (e.target.id) {
+            case 'next_button':
+                    this.handleNextButtonClick();
+                    break;
+
+                default:
+                    break;
+        }
     }
 
-    handleNextButtonClick = (e)=> {
-
-    }
 
     playButtonSound = () => {
         document.getElementById('button_sound').play();
