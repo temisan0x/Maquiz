@@ -84,6 +84,10 @@ class Play extends Component {
         this.playButtonSound();
     }
 
+    handleNextButtonClick = (e)=> {
+        
+    }
+
     playButtonSound = () => {
         document.getElementById('button_sound').play();
     }
