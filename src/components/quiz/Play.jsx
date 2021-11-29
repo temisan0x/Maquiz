@@ -65,6 +65,16 @@ class Play extends Component {
         }
     };
 
+    handleOptionClick =(e) => {
+        if (e.target.innerHTML.toLowerCase()=== this.state.answer.toLowerCase()) {
+            this.correctAnswers();
+            document.getElementById('correct_sound').play();
+        } else {
+            this.wrongAnswers();
+            document.getElementById('wrong_sound').play();
+        }
+    }
+
     handleNextButtonClick = () => {
         this.playButtonSound();
         if (this.state.nextQuestion !== undefined) {
@@ -109,7 +119,7 @@ class Play extends Component {
         this.setState(prevState => ({
             scores:prevState.score + 1,
             correctAnswers: prevState.correctAnswers + 1,
-            currentQuestionIndex: prevState.currentQuestionIndex,
+            currentQuestionIndex: prevState.currentQuestionIndex + 1,
             numberOfAnsweredQuestions:prevState.numberOfAnsweredQuestions + 1,
         }), ()=> {
             this.displayQuestion(this.state.questions, this.state.currentQuestion, this.state.nextQuestion, this.state.previousQuestion)
