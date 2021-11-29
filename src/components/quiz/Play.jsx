@@ -30,7 +30,7 @@ class Play extends Component {
             answer: '',
             numberOfQuestions:0,
             numberOfAnsweredQuestions:0,
-            currentQuestionIndex:0,
+            currentQuestionIndex:1,
             score: 0,
             correctAnswers:0,
             wrongAnswers:0,
