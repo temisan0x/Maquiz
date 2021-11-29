@@ -160,14 +160,14 @@ class Play extends Component {
                             <span><Lightbulb style={{color:"yellow", cursor:"pointer"}}/></span>
                             <span className="lineline">  5</span> 
                         </p>
-                    </div>
+                    </div><hr />
                     <div>
                         <p>
                             <span className="right" style={{float:'left'}}>{currentQuestionIndex + 1} of {numberOfQuestions}</span>
                             <span className="left" style={{float:'right'}}>2:15 <span><ClockIcon /></span>
                             </span>
                         </p>
-                    </div><br />
+                    </div>
                     <h5>{currentQuestion.question}</h5>
                     <hr />
                     <div className="options_container">
