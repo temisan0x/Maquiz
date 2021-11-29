@@ -85,7 +85,7 @@ class Play extends Component {
     }
 
     handleNextButtonClick = (e)=> {
-        
+
     }
 
     playButtonSound = () => {
@@ -184,9 +184,9 @@ class Play extends Component {
                     </div>
 
                     <div className="btn-group mt-5">
-                        <button onClick={this.handleButtonClick } type="button" class="btn btn-warning">Previous</button>
-                        <button onClick={this.handleButtonClick } type="button" class="btn btn-success">Next</button>
-                        <button onClick={this.handleButtonClick } type="button" class="btn btn-danger">Quit</button>
+                        <button id="previous_button" onClick={this.handleButtonClick } type="button" class="btn btn-warning">Previous</button>
+                        <button id="next_button" onClickk={this.handleButtonClick } type="button" class="btn btn-success">Next</button>
+                        <button id="quit_button" onClick={this.handleButtonClick } type="button" class="btn btn-danger">Quit</button>
                     </div>
                 </div>  
             </div>
