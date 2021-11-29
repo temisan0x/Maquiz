@@ -31,7 +31,7 @@ class Play extends Component {
             numberOfQuestions:0,
             numberOfAnsweredQuestions:0,
             currentQuestionIndex:0,
-            score: 0,
+            score: 1,
             correctAnswers:0,
             wrongAnswers:0,
             hints:5,
