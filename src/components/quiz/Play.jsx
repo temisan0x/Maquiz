@@ -54,7 +54,6 @@ class Play extends Component {
             nextQuestion = questions[currentQuestionIndex + 1];
             previousQuestion = questions[currentQuestionIndex - 1];
             const answer = currentQuestion.answer;
-            //setState to update answer 
             this.setState({
                     currentQuestion,
                     nextQuestion,
@@ -75,27 +74,52 @@ class Play extends Component {
         }
     }
 
+
+
     handleNextButtonClick = () => {
         this.playButtonSound();
         if (this.state.nextQuestion !== undefined) {
             this.setState(prevState => ({
                 currentQuestionIndex : prevState.currentQuestionIndex + 1
             }), () => {
-                this.displayQuestion(this.state, this.state.currentQuestion, this.state.nextQuestion, this.state.previousQuestion);
+                this.displayQuestion(this.state , this.state.currentQuestion, this.state.nextQuestion, this.state.previousQuestion);
             });
         }
+    }
+
+
+    handlePreviousButtonClick = () => {
+        this.playButtonSound();
+        if (this.state.previousQuestion !== undefined) {
+            this.setState(prevState => ({
+                currentQuestionIndex : prevState.currentQuestionIndex - 1
+            }), () => {
+                this.displayQuestion(this.state , this.state.currentQuestion, this.state.nextQuestion, this.state.previousQuestion);
+            });
+        }
+    }
+
+    handleQuitButtonClick = () => {
+        this.playButtonSound();
+        window.confirm('Are you sure you want to quit the quuiz')
     }
 
     handleButtonClick = (e) => {
         switch (e.target.id) {
             case 'next_button':
-                    this.handleNextButtonClick();
+                this.handleNextButtonClick();
                     break;
-
-                default:
+            case 'previous_button':
+                this.handlePreviousButtonClick();
                     break;
+            case 'quit_button':
+                this.handleQuitButtonClick();
+                    break;       
+                    default:
+                        break;
         }
     }
+
 
 
     playButtonSound = () => {
@@ -174,28 +198,27 @@ class Play extends Component {
                             <span><Lightbulb style={{color:"yellow", cursor:"pointer"}}/></span>
                             <span className="lineline">  5</span> 
                         </p>
-                    </div><hr />
+                    </div><hr className="hr_tag1"/><br />
                     <div>
                         <p>
                             <span className="right" style={{float:'left'}}>{currentQuestionIndex + 1} of {numberOfQuestions}</span>
                             <span className="left" style={{float:'right'}}>2:15 <span><ClockIcon /></span>
                             </span>
                         </p>
-                    </div>
+                    </div><br />
                     <h5>{currentQuestion.question}</h5>
-                    <hr />
+                    <hr /><br />
                     <div className="options_container">
-                    <p onClick={this.handleOptionClick}  className="option">{currentQuestion.optionA}</p>
-                    <p onClick={this.handleOptionClick} className="option">{currentQuestion.optionB}</p>
+                        <p onClick={this.handleOptionClick}  className="option">{currentQuestion.optionA}</p>
+                        <p onClick={this.handleOptionClick} className="option">{currentQuestion.optionB}</p>
                     </div>
                     <div className="options_container">
                     <p onClick={this.handleOptionClick} className="option">{currentQuestion.optionC}</p>
                     <p onClick={this.handleOptionClick} className="option">{currentQuestion.optionD}</p>
                     </div>
-
                     <div className="btn-group mt-5">
                         <button id="previous_button" onClick={this.handleButtonClick } type="button" class="btn btn-warning">Previous</button>
-                        <button id="next_button" onClickk={this.handleButtonClick } type="button" class="btn btn-success">Next</button>
+                        <button id="next_button" onClick={this.handleButtonClick } type="button" class="btn btn-success">Next</button>
                         <button id="quit_button" onClick={this.handleButtonClick } type="button" class="btn btn-danger">Quit</button>
                     </div>
                 </div>  

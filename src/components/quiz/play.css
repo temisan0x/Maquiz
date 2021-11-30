@@ -5,7 +5,7 @@ background: linear-gradient(to right, #2C5364, #203A43, #0F2027); /* W3C, IE 10+
 
     height:100vh;
     width:80%;
-    margin:50px auto 0 auto;
+    margin:0px auto 0 auto;
     padding: 60px 50px;
     color: white !important;
     font-family: 'MillimetreRegular'; 
@@ -33,6 +33,7 @@ h5{
 .options_container {
     display: inline-block;
     width: 50%;
+    margin-bottom:0px;
 }
 
 .option {
@@ -61,7 +62,7 @@ h5{
     transition: 0.2s linear all;
 }
 
-hr {
+.hr_tag1 {
         display: none; 
 }
 
@@ -76,4 +77,8 @@ hr {
         flex-direction: column;
         width: 100%;
     }
+
+    .hr_tag1 {
+        display:flex 
+}
 }
