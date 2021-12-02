@@ -219,6 +219,10 @@ class Play extends Component {
         }
     }
 
+    handleFiftyFifty = () => {
+        alert('clicked');
+    }
+
     render() {
         const { currentQuestion , currentQuestionIndex, numberOfQuestions, hints} = this.state;
     return (
