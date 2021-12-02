@@ -40,11 +40,13 @@ class Play extends Component {
             previousRandomNumbers: [],
             time: {}
         };
+        this.interval = null;
     }
 
     componentDidMount () {
         const {questions, currentQuestion, nextQuestion, previousQuestion}= this.state;
-        this.displayQuestion(questions, currentQuestion, nextQuestion, previousQuestion)
+        this.displayQuestion(questions, currentQuestion, nextQuestion, previousQuestion);
+        this.startTimer();
     }
 
     displayQuestion= (questions = this.state.questions, currentQuestion, nextQuestion, previousQuestion) => {
@@ -187,6 +189,9 @@ class Play extends Component {
         options.forEach(option => {
             option.style.visibility = "visible";
         });
+        this.setState({
+            usedFiftyFifty:false,
+        })
     }
 
     handleHints = () => {
@@ -220,11 +225,87 @@ class Play extends Component {
     }
 
     handleFiftyFifty = () => {
-        alert('clicked');
+        if (this.state.fiftyFifty > 0 && this.state.usedFiftyFifty === false) {
+            const options = document.querySelectorAll('.option');
+            const randomNumbers = [];
+            let indexOfAnswer;
+
+            options.forEach((option, index) => {
+                if (option.innerHTML.toLowerCase() === this.state.answer.toLowerCase()) {
+                    indexOfAnswer = index;
+                }
+            });
+
+            let count = 0;
+            do {
+                const randomNumber = Math.round(Math.random() * 3);
+                if (randomNumber !== indexOfAnswer) {
+                    if (randomNumber.length < 2 && !randomNumbers.includes(randomNumber) && !randomNumbers.includes(indexOfAnswer)) {
+                        //hide options
+                        randomNumbers.push(randomNumber);
+                        count ++;
+                    } else {
+                        while (true) {
+                            const newRandomNumber = Math.round(Math.random() * 3);
+                            if (!randomNumbers.includes(newRandomNumber) && !randomNumbers.includes(indexOfAnswer)) {
+                                randomNumbers.push(newRandomNumber);
+                                count ++;
+                                break;
+                            }
+                        }             
+                    }
+                }
+            } while (count < 2);
+            options.forEach((option, index) => {
+                if(randomNumbers.includes(index)){
+                    option.style.visibility = 'hidden';
+                }
+            });
+            this.setState(prevState =>({
+                fiftyFifty: prevState.fiftyFifty -1,
+                usedFiftyFifty:true
+            }))
+        } 
+    }
+
+    startTimer = () => {
+        const countDownTimer = Date.now() + 180000;
+        this.interval = setInterval(() => {
+            const now = new Date();
+            const distance = countDownTimer - now;
+            const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+            const seconds = Math.floor((distance % (1000 * 60)) / 1000);
+
+            if (distance < 0) {
+                clearInterval(this.interval);
+                this.setState({
+                    time: {
+                        minutes: 0,
+                        seconds: 0
+                    }
+                }, () => {
+                    alert('Quiz has ended');
+                    this.props.history.push('/'); 
+                });
+            } else {
+                this.setState({
+                    time: {
+                        minutes,
+                        seconds  
+                    }
+                })
+            }
+        }, 1000);
     }
 
     render() {
-        const { currentQuestion , currentQuestionIndex, numberOfQuestions, hints} = this.state;
+        const { currentQuestion,
+            currentQuestionIndex, 
+            fiftyFifty, 
+            numberOfQuestions, 
+            hints,
+            time}
+        = this.state;
     return (
         <Fragment>
             <div className="backgroundColor">
@@ -238,7 +319,7 @@ class Play extends Component {
                     <div className="lifeline_container">
                         <p className="icon">
                             <span onClick={this.handleFiftyFifty}><SetCenterIcon className="centerIcon"/>
-                                <span>3</span>
+                                <span>{fiftyFifty}</span>
                             </span>
                         </p>
                         <p>
@@ -252,7 +333,7 @@ class Play extends Component {
                     <div>
                         <p>
                             <span className="right" style={{float:'left'}}>{currentQuestionIndex + 1} of {numberOfQuestions}</span>
-                            <span className="left" style={{float:'right'}}>2:15 <span><ClockIcon /></span>
+                            <span className="left" style={{float:'right'}}>{time.minutes}:{time.seconds}<span><ClockIcon /></span>
                             </span>
                         </p>
                     </div><br />
