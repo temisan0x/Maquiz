@@ -21,6 +21,26 @@ background: linear-gradient(to right, #2C5364, #203A43, #0F2027); /* W3C, IE 10+
     top: -3px;
 }
 
+.lifeline_icon {
+    color: yellow;
+    cursor: pointer;
+}
+
+.lifeline_icon:hover {
+    color: orangered;
+    cursor: pointer;
+}
+
+.centerIcon {
+    color: green;
+    cursor: pointer;
+}
+
+.centerIcon:hover {
+    color: orangered;
+    cursor: pointer;
+}
+
 h5{
     font-size: 1.2rem;
     margin-top: 50px;
@@ -60,6 +80,12 @@ h5{
     justify-content: flex-start;
     margin:0 auto 1rem auto;
     transition: 0.2s linear all;
+}
+
+.quiz_image {
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .hr_tag1 {

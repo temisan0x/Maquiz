@@ -1,18 +1,20 @@
 import React from 'react';
-import {Route, Routes} from "react-router-dom";
+import {BrowserRouter as Router, Route} from "react-router-dom";
 import Home from './components/Home.jsx';
 import QuizInstruction from './components/quiz/QuizInstructions.jsx'
 import "./App.css"
 import Play from './components/quiz/Play.jsx';
+import Error from './components/Error.jsx';
 
 function App() {  
     return (
     <>
-        <Routes>    
-            <Route path="/" exact element={<Home/>} />
-            <Route path="/play/instructions" exact element={<QuizInstruction/>} />
-            <Route path="/play/quiz" exact element={<Play/>} />
-        </Routes>  
+        <Router>    
+            <Route path="/" exact component={Home} />
+            <Route path="/play/instructions" exact component={QuizInstruction} />
+            <Route path="/play/quiz" exact component={Play} />
+            {/* <Route path="*" exact component={Error} /> */}
+        </Router>  
         
     </>
     )

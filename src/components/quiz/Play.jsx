@@ -37,6 +37,7 @@ class Play extends Component {
             hints:5,
             fiftyFifty:2,
             usedFiftyFifty:false,
+            previousRandomNumber: [],
             time: {}
         };
     }
@@ -59,7 +60,10 @@ class Play extends Component {
                     nextQuestion,
                     previousQuestion,
                     numberOfQuestions: questions.length,
-                    answer
+                    answer,
+                    previousRandomNumber: []
+                }, () => {
+                    this.showOption();
                 });
         }
     };
@@ -121,7 +125,6 @@ class Play extends Component {
     }
 
 
-
     playButtonSound = () => {
         document.getElementById('button_sound').play();
     }
@@ -178,6 +181,11 @@ class Play extends Component {
         });
     }
 
+    showOption = () => {
+        const options = Array.from(document.querySelectorAll(".option"));
+        let indexOfAnswer;
+    }
+
     render() {
         const { currentQuestion , currentQuestionIndex, numberOfQuestions} = this.state;
     return (
@@ -192,13 +200,18 @@ class Play extends Component {
                 <div className="questions">
                     <div className="lifeline_container">
                         <p className="icon">
-                            <span><SetCenterIcon style={{color:"green", cursor:"pointer"}}/>  3</span>
+                            <span><SetCenterIcon className="centerIcon"/>
+                                <span>3</span>
+                            </span>
                         </p>
                         <p>
-                            <span><Lightbulb style={{color:"yellow", cursor:"pointer"}}/></span>
-                            <span className="lineline">  5</span> 
+                            <span><Lightbulb className="lifeline_icon"/>
+                                <span className="lineline">5</span> 
+                            </span>
                         </p>
-                    </div><hr className="hr_tag1"/><br />
+                    </div>
+                    <hr className="hr_tag1"/>
+                    <br />
                     <div>
                         <p>
                             <span className="right" style={{float:'left'}}>{currentQuestionIndex + 1} of {numberOfQuestions}</span>
@@ -206,6 +219,9 @@ class Play extends Component {
                             </span>
                         </p>
                     </div><br />
+                    <div className="quiz_image">
+                        <img src={currentQuestion.url} alt="quiz image" style={{width:'200px'}}/>
+                    </div>
                     <h5>{currentQuestion.question}</h5>
                     <hr /><br />
                     <div className="options_container">
