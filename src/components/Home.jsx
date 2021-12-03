@@ -10,13 +10,13 @@ const Home = () => (
             </title>
         </Helmet>
         <div className="home d-flex">
-            <section style={{textAlign: 'center'}}>
+            <section class="home_section" style={{textAlign: 'center'}}>
                 <div style={{marginTop:"80px"}}>
                     <img src="https://img.icons8.com/external-vitaliy-gorbachev-lineal-color-vitaly-gorbachev/60/000000/external-quiz-online-learning-vitaliy-gorbachev-lineal-color-vitaly-gorbachev.png" alt="bg-img" />
                 </div>
                 <h1>Quiz App</h1>
                 <div className="play-button-container">
-                    <ul>
+                    <div>
                         <lbi>
                             <Link to="/play/instructions" class="cssbuttons-io-button play-button" style={{fontWeight:"800"}}>
                                 PLAY
@@ -30,14 +30,14 @@ const Home = () => (
                                 </div>
                             </Link>
                         </lbi>
-                    </ul>
+                    </div>
                     <div className="auth-container">
                         <Link className="auth-buttons" id="auth-login" to="/login">                                                 
-                            <span>Login</span>
+                            <span><p className="button_padding">Login</p></span>
                             <div class="liquid"></div>
                         </Link>
                         <Link className="auth-buttons" id="auth-register" to="/register">
-                            <span>Sign Up</span>
+                            <span><p>Sign Up</p></span>
                             <div class="liquid"></div>
                         </Link>
                     </div>

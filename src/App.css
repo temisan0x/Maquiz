@@ -28,6 +28,11 @@ h1 {
 
     .home {
         margin-top:0px;
+        height: 100vh;
+    }
+
+    .home_section {
+        margin-bottom: 300px;
     }
 
     section{
@@ -51,6 +56,17 @@ h1 {
 
     .play-button-container {
         margin-top: 50px;
+    }
+
+    .auth-buttons {
+        border-radius: 4px !important;
+        width: 100px !important;
+        height: 40px;
+        font-size: 13px;
+    }
+
+    .button_padding {
+        padding-top: 5px;
     }
 
 }  
