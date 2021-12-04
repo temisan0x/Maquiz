@@ -12,6 +12,7 @@ import 'react-toastify/dist/ReactToastify.css';
 import correctNotifications from '../../assets/audio/Correct-answer.mp3'
 import clickNotifications from '../../assets/audio/Clicking-sound-effect.mp3'
 import wrongNotifications from '../../assets/audio/Wrong-answer-sound-effect.mp3'
+import fiftyFift from '../../assets/img/fifty-fifty.png'
 
 toast.configure();
 const customId = "custom-id-yes"
@@ -107,7 +108,7 @@ class Play extends Component {
 
     handleQuitButtonClick = () => {
         this.playButtonSound();
-        window.confirm('Are you sure you want to quit the quuiz')
+        window.confirm('Are you sure you want to quit the quuiz ')
     }
 
     handleButtonClick = (e) => {
@@ -269,7 +270,7 @@ class Play extends Component {
     }
 
     startTimer = () => {
-        const countDownTimer = Date.now() + 180000;
+        const countDownTimer = Date.now() + 1800000000;
         this.interval = setInterval(() => {
             const now = new Date();
             const distance = countDownTimer - now;
@@ -316,31 +317,38 @@ class Play extends Component {
                     <audio id="wrong_sound" type="audio" src={wrongNotifications}></audio>
                 </Fragment>
                 <div className="questions">
-                    <div className="lifeline_container">
-                        <p className="icon">
-                            <span onClick={this.handleFiftyFifty}><SetCenterIcon className="centerIcon"/>
-                                <span>{fiftyFifty}</span>
+                    <div className="question_header">
+                        <div className="btn quiz_bold" id="quit_button"type="button"  onClick={this.handleButtonClick } >
+                            X
+                        </div>
+                        <div className="quiz_timer">
+                            <span>{time.minutes}:{time.seconds} <span>
+                            ⏲️ </span>
                             </span>
-                        </p>
-                        <p>
-                            <span onClick={this.handleHints}><Lightbulb className="lifeline_icon"/>
-                                <span className="lifeline">{hints}</span> 
-                            </span>
-                        </p>
+                        </div>
+                        <div className="lifeline_container">
+                            <div className="icon">
+                                <span className="icon_left" onClick={this.handleFiftyFifty}><SetCenterIcon className="centerIcon" fontSize="large" size="35"/>
+                                    <span>{fiftyFifty}</span>
+                                </span>
+                                <span onClick={this.handleHints}><span className="lifeline_icon">💡</span> 
+                                    <span className="lifeline">{hints}</span> 
+                                </span>
+                            </div>
+                        </div>
                     </div>
-                    <hr className="hr_tag1"/>
-                    <br />
-                    <div>
-                        <p>
-                            <span className="right" style={{float:'left'}}>{currentQuestionIndex + 1} of {numberOfQuestions}</span>
-                            <span className="left" style={{float:'right'}}>{time.minutes}:{time.seconds}<span><ClockIcon /></span>
-                            </span>
-                        </p>
-                    </div><br />
                     <div className="quiz_image">
-                        <img src={currentQuestion.url} alt="quiz image" style={{width:'200px'}}/>
+                        {currentQuestion.emoji}
                     </div>
-                    <h5>{currentQuestion.question}</h5>
+
+
+                    <div className="question_section">
+                        <div className="numberOfQuestions" style={{float:'left'}}>
+                            <span className="right">question</span>
+                            <span>{currentQuestionIndex + 1} of {numberOfQuestions}</span>
+                        </div> 
+                        <h5>{currentQuestion.question}</h5>
+                    </div>
                     <hr /><br />
                     <div className="options_container">
                         <p onClick={this.handleOptionClick}  className="option">{currentQuestion.optionA}</p>
@@ -350,12 +358,7 @@ class Play extends Component {
                     <p onClick={this.handleOptionClick} className="option">{currentQuestion.optionC}</p>
                     <p onClick={this.handleOptionClick} className="option">{currentQuestion.optionD}</p>
                     </div>
-                    <div className="btn-group mt-5">
-                        <button id="previous_button" onClick={this.handleButtonClick } type="button" class="btn btn-warning">Previous</button>
-                        <button id="next_button" onClick={this.handleButtonClick } type="button" class="btn btn-success">Next</button>
-                        <button id="quit_button" onClick={this.handleButtonClick } type="button" class="btn btn-danger">Quit</button>
-                    </div>
-                </div>  
+                </div>
             </div>
         </Fragment>
         )

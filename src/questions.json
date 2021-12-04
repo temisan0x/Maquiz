@@ -6,7 +6,7 @@
         "optionC": "cats can swim, but don’t like to",
         "optionD": "cats can’t swim",
         "answer": "wet fur takes too long to dry",
-        "url": " https://www.seekpng.com/png/detail/373-3738599_free-confused-cat-clip-art-clip-art-cartoon.png"
+        "emoji": "😀"
     },
 
     {
@@ -16,7 +16,7 @@
         "optionC": "Ngozi Chimamanda Adichie",
         "optionD": "Dan Brown",
         "answer": "William Shakespeare",
-        "url": "https://cdn.pixabay.com/photo/2015/04/23/22/00/tree-736885__480.jpg"
+        "emoji": "😀"
     },
 
     {
@@ -26,7 +26,7 @@
         "optionC": "A pair of shoes",
         "optionD": "Alarm Clock",
         "answer": "Alarm Clock",
-        "url": "../src/assets/img/fifty-fifty.png"
+        "emoji": "😀"
     },
 
     {
@@ -36,7 +36,7 @@
         "optionC": "Goat",
         "optionD": "Lion",
         "answer": "Elephant",
-        "url": "../src/assets/img/fifty-fifty.png"
+        "emoji": "😀"
     },
 
     {

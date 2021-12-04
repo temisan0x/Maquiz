@@ -6,15 +6,15 @@ const Home = () => (
     <Fragment>
         <Helmet>
             <title>
-                Quiz App - Home
+                EmojiQuiz App - Home
             </title>
         </Helmet>
         <div className="home d-flex">
             <section class="home_section" style={{textAlign: 'center'}}>
-                <div style={{marginTop:"200px"}}>
-                    <img src="https://img.icons8.com/external-vitaliy-gorbachev-lineal-color-vitaly-gorbachev/60/000000/external-quiz-online-learning-vitaliy-gorbachev-lineal-color-vitaly-gorbachev.png" alt="bg-img" />
+                <div style={{marginTop:"100px"}}>
+                    <img src="https://emojipedia.org/static/img/logo/emojipedia-logo-140.0d779a8a903c.png" alt="bg-img" />
                 </div>
-                <h1>Quiz App</h1>
+                <h1>Emoji Quiz App</h1>
                 <div className="play-button-container">
                     <div>
                         <lbi>

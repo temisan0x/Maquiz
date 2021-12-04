@@ -8,7 +8,7 @@ import Error from './components/Error.jsx';
 
 function App() {  
     return (
-    <>
+    <div className="container">
         <Router>    
             <Route path="/" exact component={Home} />
             <Route path="/play/instructions" exact component={QuizInstruction} />
@@ -16,7 +16,7 @@ function App() {
             {/* <Route path="*" exact component={Error} /> */}
         </Router>  
         
-    </>
+    </div>
     )
 }
 
