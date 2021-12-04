@@ -6,13 +6,13 @@
 
 html, body {background-image: url(https://i.pinimg.com/originals/f1/3c/15/f13c1555d88675030a19308ffd2ce1cb.png);  
     background-position: center;
-    height: 100vh;
     overflow-y: auto;
     -webkit-background-size: cover;
     -moz-background-size: cover;
     -o-background-size: cover;
     background-size: cover;
     width: 100%;
+    background-repeat: no-repeat;
 }
 
 .icon {

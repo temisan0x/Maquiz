@@ -11,7 +11,7 @@ const Home = () => (
         </Helmet>
         <div className="home d-flex">
             <section class="home_section" style={{textAlign: 'center'}}>
-                <div style={{marginTop:"80px"}}>
+                <div style={{marginTop:"200px"}}>
                     <img src="https://img.icons8.com/external-vitaliy-gorbachev-lineal-color-vitaly-gorbachev/60/000000/external-quiz-online-learning-vitaliy-gorbachev-lineal-color-vitaly-gorbachev.png" alt="bg-img" />
                 </div>
                 <h1>Quiz App</h1>
