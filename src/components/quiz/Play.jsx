@@ -344,10 +344,10 @@ class Play extends Component {
 
                     <div className="question_section">
                         <div className="numberOfQuestions" style={{float:'left'}}>
-                            <span className="right">question</span>
+                            <span>question</span>
                             <span>{currentQuestionIndex + 1} of {numberOfQuestions}</span>
                         </div> 
-                        <h5>{currentQuestion.question}</h5>
+                        <h5 className="question_">{currentQuestion.question}</h5>
                     </div>
                     <hr /><br />
                     <div className="options_container">

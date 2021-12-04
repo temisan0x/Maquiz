@@ -186,5 +186,24 @@ background: linear-gradient(to right, #BFE6BA, #D3959B); /* W3C, IE 10+/ Edge, F
     .lifeline_icon {
         font-size: 1.3rem;
     }
+
+    .quiz_timer {
+        text-align: center;
+        padding-left: 35px;
+    }
+
+    .question_section {
+        display: flex;
+        flex-direction: column;
+        height: 100px;
+    }
+
+    .question_ {
+        margin-top: 20px;
+    }
+
+    .quiz_image {
+        margin-top: 100px;
+    } 
     
 }
