@@ -2,8 +2,6 @@ import React, { Fragment } from 'react';
 import { Helmet } from 'react-helmet';
 import { Component } from 'react/cjs/react.production.min';
 import SetCenterIcon from 'mdi-react/SetCenterIcon';
-import Lightbulb  from 'mdi-react/LightbulbOnIcon';
-import ClockIcon from 'mdi-react/ClockIcon';
 import "./play.css";
 import questions from "../../questions.json";
 import isEmpty from '../../utils/is-empty';
@@ -12,7 +10,7 @@ import 'react-toastify/dist/ReactToastify.css';
 import correctNotifications from '../../assets/audio/Correct-answer.mp3'
 import clickNotifications from '../../assets/audio/Clicking-sound-effect.mp3'
 import wrongNotifications from '../../assets/audio/Wrong-answer-sound-effect.mp3'
-import fiftyFift from '../../assets/img/fifty-fifty.png'
+
 
 toast.configure();
 const customId = "custom-id-yes"
@@ -108,7 +106,7 @@ class Play extends Component {
 
     handleQuitButtonClick = () => {
         this.playButtonSound();
-        window.confirm('Are you sure you want to quit the quuiz ')
+        window.confirm('Are you sure you want to quit the quiz 😥')
     }
 
     handleButtonClick = (e) => {
@@ -328,12 +326,10 @@ class Play extends Component {
                         </div>
                         <div className="lifeline_container">
                             <div className="icon">
-                                <span className="icon_left" onClick={this.handleFiftyFifty}><SetCenterIcon className="centerIcon" fontSize="large" size="35"/>
+                                <span className="icon_left" onClick={this.handleFiftyFifty}><SetCenterIcon className="centerIcon" size="25"/>
                                     <span>{fiftyFifty}</span>
                                 </span>
-                                <span onClick={this.handleHints}><span className="lifeline_icon">💡</span> 
-                                    <span className="lifeline">{hints}</span> 
-                                </span>
+                                <span onClick={this.handleHints}className="lifeline_icon">💡{hints}</span> 
                             </div>
                         </div>
                     </div>
@@ -344,7 +340,7 @@ class Play extends Component {
 
                     <div className="question_section">
                         <div className="numberOfQuestions" style={{float:'left'}}>
-                            <span>question</span>
+                            <span>question     </span>
                             <span>{currentQuestionIndex + 1} of {numberOfQuestions}</span>
                         </div> 
                         <h5 className="question_">{currentQuestion.question}</h5>
@@ -358,6 +354,10 @@ class Play extends Component {
                     <p onClick={this.handleOptionClick} className="option">{currentQuestion.optionC}</p>
                     <p onClick={this.handleOptionClick} className="option">{currentQuestion.optionD}</p>
                     </div>
+                </div>
+                <div class="btn-group btn-group-sm" role="group">
+                    <button id="previous_button" onClick={this.handleButtonClick } type="button" class="btn size_right">⏮️  Previous</button>
+                    <button id="next_button" onClick={this.handleButtonClick } type="button" class="btn size_left">Next ⏭️</button>
                 </div>
             </div>
         </Fragment>

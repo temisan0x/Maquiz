@@ -4,7 +4,6 @@ import Home from './components/Home.jsx';
 import QuizInstruction from './components/quiz/QuizInstructions.jsx'
 import "./App.css"
 import Play from './components/quiz/Play.jsx';
-import Error from './components/Error.jsx';
 
 function App() {  
     return (

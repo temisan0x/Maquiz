@@ -58,7 +58,7 @@
     font-size: 1.5rem;    
     border: 2px solid white;
     border-radius: 30px;
-    padding: 6px;
+    padding: 1.2px;
 }
 
 .icon_left {
@@ -148,12 +148,57 @@ background: linear-gradient(to right, #BFE6BA, #D3959B); /* W3C, IE 10+/ Edge, F
     transition: 0.2s linear all;
 }
 
+.btn-group-sm {
+    width: 100%;
+    margin-top: 30px ;
+    padding: 10px;
+    height: 60px;
+    justify-content: space-evenly;
+}
+
+.size_right {
+    max-width: 30%;
+    border-radius: 9%;
+}
+
+.size_left {
+    max-width: 30%;
+    border-radius: 5%;
+}
 .quiz_image {
     display: flex;
     justify-content: center;
     align-items: center;
     margin-top: 38px;
     font-size: 100px;
+}
+
+#previous_button {
+    background: #2C3E50;  /* fallback for old browsers */
+background: -webkit-linear-gradient(to right, #FD746C, #2C3E50);  /* Chrome 10-25, Safari 5.1-6 */
+background: linear-gradient(to right, #FD746C, #2C3E50); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
+}
+
+#previous_button:hover {
+    background: #2C3E50;  /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, #FD746C, #2C3E50);  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, #FD746C, #2C3E50); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    color: black;
+}
+
+#next_button {
+    background: #52c234;  /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, #061700, #52c234);  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, #061700, #52c234); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
+}
+
+#next_button:hover {
+    background: #52c234;  /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, #061700, #52c234);  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, #061700, #52c234); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    color:black;
 }
 
 .hr_tag1 {
@@ -203,7 +248,17 @@ background: linear-gradient(to right, #BFE6BA, #D3959B); /* W3C, IE 10+/ Edge, F
     }
 
     .quiz_image {
-        margin-top: 100px;
+        margin-top: 40px;
     } 
-    
+
+    .option {
+        height: 36px;
+    }
+
+    .quiz_image {
+        font-size: 2.5rem;
+    }
+    .quiz_timer {
+        font-size: 1.5rem;
+    }
 }
