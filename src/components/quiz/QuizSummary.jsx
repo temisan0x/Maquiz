@@ -22,7 +22,7 @@ class QuizSummary extends Component {
         if (state) {
             this.setState({
                 score: (state.score / state.numberOfQuestions) * 100,
-                numberOfQuestions: state.numberOfQuestions - (state.correctAnswers + state.wrongAnswers),
+                numberOfQuestions: state.numberOfQuestions,
                 numberOfAnsweredQuestions: state.numberOfAnsweredQuestions,
                 correctAnswers: state.correctAnswers,
                 wrongAnswers: state.wrongAnswers,
@@ -33,16 +33,17 @@ class QuizSummary extends Component {
     }
 
     render() {
-        const {state, score} = this.props.location;
+        const {state} = this.props.location;
         let stats, remark;
+        const userScore = this.state.score
 
-        if(score <= 30) {
+        if(userScore <= 30) {
             remark = 'You need more practice!';
-        } else if(score > 30 && score <= 50) {
+        } else if(userScore > 30 && userScore <= 50) {
             remark = 'Better luck next time!';
-        } else if(score <= 70 && score > 50) {
+        } else if(userScore <= 70 && userScore > 50) {
             remark = 'You can do better!'
-        } else if(score >= 71 && score <= 84) {
+        } else if(userScore >= 71 && userScore <= 84) {
             remark = 'You did great!';
         } else {
             remark = 'You are an absolute genius'
@@ -51,40 +52,39 @@ class QuizSummary extends Component {
         if (state !== undefined) {
             stats = (
             <Fragment>
-                <div>
-                    <img src="https://emojipedia-us.s3.amazonaws.com/source/skype/289/check-box-with-check_2611-fe0f.png" alt="check" />
+                <div className="text-center mt-5">
+                    <img src="https://emojipedia-us.s3.amazonaws.com/source/skype/289/check-box-with-check_2611-fe0f.png" alt="check" width="150"/>
                 </div>
                 <h1>Quiz has ended</h1>
-                <div className="container">
-                    <h4>{remark}</h4>
-                    <h2>Your Score: {this.state.score.toFixed(0)}&#37;</h2>
-                    <span className="stats left">Total number of questions: </span>
-                    <span className="right">{this.state.numberOfQuestions}</span>
-                    <br />
-                    <span className="stats left">Total number of Attempted questions: </span>
-                    <span className="right">{this.state.numberOfAnsweredQuestions}</span>
-                    <br />
-                    <span className="stats left">Total number of Correct Answer: </span>
-                    <span className="right">{this.state.correctAnswers}</span>
-                    <br />
-                    <span className="stats left">Total number of Wrong Answer: </span>
-                    <span className="right">{this.state.wrongAnswers}</span>
-                    <br />
-                    <span className="stats left">Total number of Hint Used: </span>
-                    <span className="right">{this.state.hintsUsed}</span>
-                    <br />
-                    <span className="stats left">50 - 50 Used: </span>
-                    <span className="right">{this.state.fiftyFiftyUsed}</span>
+                <div className="quiz_summary text-white">
+                    <h1>{remark}</h1>
+                    <h1>Your Score: {this.state.score.toFixed(0)}&#37;</h1>
+                    <span className="summary_left">Total number of questions: </span>
+                    <span className="summary_right">{this.state.numberOfQuestions}</span>
+                    <br /><hr />
+                    <span className="summary_left">Total number of Attempted questions: </span>
+                    <span className="summary_right">{this.state.numberOfAnsweredQuestions}</span>
+                    <br /><hr />
+                    <span className="summary_left">Total number of Correct Answer: </span>
+                    <span className="summary_right">{this.state.correctAnswers}</span>
+                    <br /><hr />
+                    <span className="summary_left">Total number of Wrong Answer: </span>
+                    <span className="summary_right">{this.state.wrongAnswers}</span>
+                    <br /><hr />
+                    <span className="summary_left">Total number of Hint Used: </span>
+                    <span className="summary_right">{this.state.hintsUsed}</span>
+                    <br /><hr />
+                    <span className="summary_left">50 - 50 Used: </span>
+                    <span className="summary_right">{this.state.fiftyFiftyUsed}</span>
                 </div>
                 <section>
-                    <ul>
+                    {/* <ul>
                         <li>
                             <Link to="/">Back to home</Link>
                         </li>
                         <li>
                             <Link to="/play/quiz">Play Again</Link>
-                        </li>
-                    </ul>
+                        </li> */}
                 </section>
             </Fragment>
             ) 

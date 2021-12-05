@@ -83,11 +83,9 @@ class Play extends Component {
     handleOptionClick =(e) => {
         if (e.target.innerHTML.toLowerCase()=== this.state.answer.toLowerCase()) {
             this.correctAnswers();
-            // document.getElementById('correct_sound').play();
             this.correctSound.current.play();
         } else {
             this.wrongAnswers();
-            // document.getElementById('wrong_sound').play();
             this.wrongSound.current.play();
         }
     }
@@ -141,7 +139,6 @@ class Play extends Component {
 
 
     playButtonSound = () => {
-        // document.getElementById('button_sound').play();
         this.buttonSound.current.play();
     }
     
@@ -348,14 +345,14 @@ class Play extends Component {
         const playerStats = {
             score: state.score,
             numberOfQuestions: state.numberOfQuestions,
-            numberOfAnsweredQuestions:state.numberOfAnsweredQuestions,
+            numberOfAnsweredQuestions:state.correctAnswers + state.wrongAnswers,
             correctAnswers: state.correctAnswers,
             wrongAnswers: state.wrongAnswers,
             fiftyFiftyUsed: 2 - state.fiftyFifty,
             hintsUsed: 5 - state.hints,
         };
-        console.log(playerStats);
         setTimeout(() => {
+            console.log(playerStats);
             this.props.history.push('/Play/quiz/summary', playerStats);
         }, 1000);
     }
