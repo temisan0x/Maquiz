@@ -49,7 +49,12 @@ class QuizSummary extends Component {
 
         if (state !== undefined) {
             stats = (
-                <div></div>
+            <Fragment>
+                <div>
+                    <img src="https://emojipedia-us.s3.amazonaws.com/source/skype/289/check-box-with-check_2611-fe0f.png" alt="check" />
+                </div>
+                <h1>Quiz has ended</h1>
+            </Fragment>
             ) 
         } else {
             stats = (
