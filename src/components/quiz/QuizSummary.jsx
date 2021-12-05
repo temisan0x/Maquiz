@@ -1,5 +1,6 @@
 import React, {Component, Fragment} from 'react';
 import { Helmet } from 'react-helmet';
+import {Link} from 'react-router-dom';
 
 class QuizSummary extends Component {
 
@@ -54,11 +55,54 @@ class QuizSummary extends Component {
                     <img src="https://emojipedia-us.s3.amazonaws.com/source/skype/289/check-box-with-check_2611-fe0f.png" alt="check" />
                 </div>
                 <h1>Quiz has ended</h1>
+                <div className="container">
+                    <h4>{remark}</h4>
+                    <h2>Your Score: {this.state.score.toFixed(0)}&#37;</h2>
+                    <span className="stats left">Total number of questions: </span>
+                    <span className="right">{this.state.numberOfQuestions}</span>
+                    <br />
+                    <span className="stats left">Total number of questions: </span>
+                    <span className="right">{this.state.numberOfQuestions}</span>
+                    <br />
+                    <span className="stats left">Total number of questions: </span>
+                    <span className="right">{this.state.numberOfQuestions}</span>
+                    <br />
+                    <span className="stats left">Total number of questions: </span>
+                    <span className="right">{this.state.numberOfQuestions}</span>
+                    <br />
+                    <span className="stats left">Total number of questions: </span>
+                    <span className="right">{this.state.numberOfQuestions}</span>
+                    <br />
+                    <span className="stats left">Total number of questions: </span>
+                    <span className="right">{this.state.numberOfQuestions}</span>
+                </div>
+                <section>
+                    <ul>
+                        <li>
+                            <Link to="/">Back to home</Link>
+                        </li>
+                        <li>
+                            <Link to="/play/quiz">Play Again</Link>
+                        </li>
+                    </ul>
+                </section>
             </Fragment>
             ) 
         } else {
             stats = (
-                <h1>No Stats availabe please take a quiz</h1>
+                <Fragment>
+                    <section>
+                        <h1 className="no">No Stats available please take a quiz</h1>
+                        <ul>
+                        <li>
+                            <Link to="/">Back to home</Link>
+                        </li>
+                        <li>
+                            <Link to="/play/quiz">Play Again</Link>
+                        </li>
+                    </ul>
+                    </section>
+                </Fragment>
             )
         }
         return (
