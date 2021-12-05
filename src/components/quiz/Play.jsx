@@ -120,6 +120,7 @@ class Play extends Component {
     handleQuitButtonClick = () => {
         this.playButtonSound();
         window.confirm('Are you sure you want to quit the quiz 😥')
+        this.props.history.push('/')
     }
 
     handleButtonClick = (e) => {
@@ -219,7 +220,7 @@ class Play extends Component {
         if(this.state.hints > 0) {
             const options = Array.from(document.querySelectorAll('.option'));
             let indexOfAnswer;
-
+            this.buttonSound.current.play();
             options.forEach((option, index) => {
                 if(option.innerHTML.toLowerCase() === this.state.answer.toLowerCase()){
                     indexOfAnswer = index;
@@ -250,7 +251,7 @@ class Play extends Component {
             const options = document.querySelectorAll('.option');
             const randomNumbers = [];
             let indexOfAnswer;
-
+            this.buttonSound.current.play();
             options.forEach((option, index) => {
                 if (option.innerHTML.toLowerCase() === this.state.answer.toLowerCase()) {
                     indexOfAnswer = index;
@@ -355,7 +356,7 @@ class Play extends Component {
         };
         console.log(playerStats);
         setTimeout(() => {
-            this.props.history.push('/')
+            this.props.history.push('/Play/quiz/summary', playerStats);
         }, 1000);
     }
 
@@ -391,7 +392,7 @@ class Play extends Component {
                                 <span className="icon_left" onClick={this.handleFiftyFifty}><SetCenterIcon className="centerIcon" size="25"/>
                                     <span>{fiftyFifty}</span>
                                 </span>
-                                <span onClick={this.handleHints}className="lifeline_icon">💡{hints}</span> 
+                                <span onClick={this.handleHints} className="lifeline_icon">💡{hints}</span> 
                             </div>
                         </div>
                     </div>
