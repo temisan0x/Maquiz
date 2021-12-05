@@ -43,6 +43,9 @@ class Play extends Component {
             time: {}
         };
         this.interval = null;
+        this.correctSound = React.createRef();
+        this.wrongSound = React.createRef();
+        this.buttonSound = React.createRef();
     }
 
     componentDidMount () {
@@ -51,7 +54,9 @@ class Play extends Component {
         this.startTimer();
     }
 
-    
+    componentWillUnmount () {
+        clearInterval(this.interval);
+    }
 
     displayQuestion= (questions = this.state.questions, currentQuestion, nextQuestion, previousQuestion) => {
         let {currentQuestionIndex} = this.state;
@@ -78,10 +83,12 @@ class Play extends Component {
     handleOptionClick =(e) => {
         if (e.target.innerHTML.toLowerCase()=== this.state.answer.toLowerCase()) {
             this.correctAnswers();
-            document.getElementById('correct_sound').play();
+            // document.getElementById('correct_sound').play();
+            this.correctSound.current.play();
         } else {
             this.wrongAnswers();
-            document.getElementById('wrong_sound').play();
+            // document.getElementById('wrong_sound').play();
+            this.wrongSound.current.play();
         }
     }
 
@@ -133,7 +140,8 @@ class Play extends Component {
 
 
     playButtonSound = () => {
-        document.getElementById('button_sound').play();
+        // document.getElementById('button_sound').play();
+        this.buttonSound.current.play();
     }
     
     correctAnswers = () => {
@@ -364,9 +372,9 @@ class Play extends Component {
             <div className="backgroundColor">
                 <Helmet><title>Quiz Page</title></Helmet>
                 <Fragment>
-                    <audio id="correct_sound" type="audio" src={correctNotifications}></audio>
-                    <audio id="button_sound" type="audio" src={clickNotifications}></audio>
-                    <audio id="wrong_sound" type="audio" src={wrongNotifications}></audio>
+                    <audio ref={this.correctSound} type="audio" src={correctNotifications}></audio>
+                    <audio ref={this.buttonSound} type="audio" src={clickNotifications}></audio>
+                    <audio ref={this.wrongSound} type="audio" src={wrongNotifications}></audio>
                 </Fragment>
                 <div className="questions">
                     <div className="question_header">
