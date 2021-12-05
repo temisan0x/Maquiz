@@ -205,6 +205,13 @@ background: linear-gradient(to right, #FD746C, #2C3E50); /* W3C, IE 10+/ Edge, F
         display: none; 
 }
 
+.disable {
+    pointer-events: none;
+    background-color: #ccc !important;
+    box-shadow: none !important;
+    opacity: 0.9 !important;
+}
+
 @media (max-width: 768px) {
     p {
         font-size: 0.9rem;

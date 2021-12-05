@@ -10,6 +10,7 @@ import 'react-toastify/dist/ReactToastify.css';
 import correctNotifications from '../../assets/audio/Correct-answer.mp3'
 import clickNotifications from '../../assets/audio/Clicking-sound-effect.mp3'
 import wrongNotifications from '../../assets/audio/Wrong-answer-sound-effect.mp3'
+import classNames from 'classnames'
 
 
 toast.configure();
@@ -37,6 +38,8 @@ class Play extends Component {
             fiftyFifty:2,
             usedFiftyFifty:false,
             previousRandomNumbers: [],
+            nextButtonDisabled:false,
+            previousButtonDisabled:true,
             time: {}
         };
         this.interval = null;
@@ -65,6 +68,7 @@ class Play extends Component {
                     previousRandomNumbers: []
                 }, () => {
                     this.showOption();
+                    this.handleDisableButton();
                 });
         }
     };
@@ -268,7 +272,7 @@ class Play extends Component {
     }
 
     startTimer = () => {
-        const countDownTimer = Date.now() + 1800000000;
+        const countDownTimer = Date.now() + 180000;
         this.interval = setInterval(() => {
             const now = new Date();
             const distance = countDownTimer - now;
@@ -295,6 +299,43 @@ class Play extends Component {
                 })
             }
         }, 1000);
+    }
+
+    handleDisableButton =()=> {
+        if (this.state.previousQuestion === undefined || this.state.currentQuestionIndex === 0 ) {
+            this.setState({
+                previousButtonDisabled: true
+            });
+        } else {
+            this.setState({
+                previousButtonDisabled: false
+            });
+        }
+
+        if (this.state.nextQuestion === undefined || this.state.currentQuestionIndex + 1 === this.state.numberOfQuestions) {
+            this.setState({
+                nextButtonDisabled: true
+            });
+        } else {
+            this.setState({
+                nextButtonDisabled: false
+            });
+        }
+        
+    }
+
+    endeGame =()=> {
+        alert(`Quiz has ended`);
+        const {state} = this;
+        const playerStates = {
+            score: state.score,
+            numberOfQuestions: state.numberOfQuestions,
+            numberOfAnsweredQuestions:state.numberOfAnsweredQuestions,
+            correctAnswers: state.correctAnswers,
+            wrongAnswers: state.wrongAnswers,
+            fiftyFiftyUsed: 2 - state.fiftyFifty,
+            hintsUsed: 5 - state.hints,
+        };
     }
 
     render() {
@@ -355,9 +396,21 @@ class Play extends Component {
                     <p onClick={this.handleOptionClick} className="option">{currentQuestion.optionD}</p>
                     </div>
                 </div>
-                <div class="btn-group btn-group-sm" role="group">
-                    <button id="previous_button" onClick={this.handleButtonClick } type="button" class="btn size_right">⏮️  Previous</button>
-                    <button id="next_button" onClick={this.handleButtonClick } type="button" class="btn size_left">Next ⏭️</button>
+                <div className="btn-group btn-group-sm" role="group">
+                    <button 
+                        id="previous_button" 
+                        onClick={this.handleButtonClick } 
+                        type="button" 
+                        className={classNames('btn size_right', {'disable': this.state.previousButtonDisabled})}>
+                            ⏮️  Previous
+                    </button>
+                    <button 
+                        id="next_button" 
+                        onClick={this.handleButtonClick } 
+                        type="button" 
+                        className={classNames('btn size_left', {'disable': this.state.nextButtonDisabled})}>
+                            Next ⏭️
+                    </button>
                 </div>
             </div>
         </Fragment>
