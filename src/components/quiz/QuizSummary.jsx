@@ -18,24 +18,50 @@ class QuizSummary extends Component {
 
     componentDidMount () {
         const {state} = this.props.location;
-        this.setState({
-            score: (state.score / state.numberOfQuestions) * 100,
-            numberOfQuestions: state.numberOfQuestions,
-            numberOfAnsweredQuestions: state.numberOfAnsweredQuestions,
-            correctAnswers: state.correctAnswers,
-            wrongAnswers: state.wrongAnswers,
-            hintsUsed: state.hintsUsed,
-            fiftyFiftyUsed: state.fiftyFiftyUsed
-        });
+        if (state) {
+            this.setState({
+                score: (state.score / state.numberOfQuestions) * 100,
+                numberOfQuestions: state.numberOfQuestions,
+                numberOfAnsweredQuestions: state.numberOfAnsweredQuestions,
+                correctAnswers: state.correctAnswers,
+                wrongAnswers: state.wrongAnswers,
+                hintsUsed: state.hintsUsed,
+                fiftyFiftyUsed: state.fiftyFiftyUsed
+            });
+        }
     }
 
     render() {
-        console.log(this.props);
+        const {state, score} = this.props.location;
+        let stats, remark;
+
+        if(score <= 30) {
+            remark = 'You need more practice!';
+        } else if(score > 30 && score <= 50) {
+            remark = 'Better luck next time!';
+        } else if(score <= 70 && score > 50) {
+            remark = 'You can do better!'
+        } else if(score >= 71 && score <= 84) {
+            remark = 'You did great!';
+        } else {
+            remark = 'You are an absolute genius'
+        }
+
+        if (state !== undefined) {
+            stats = (
+                <div></div>
+            ) 
+        } else {
+            stats = (
+                <h1>No Stats availabe please take a quiz</h1>
+            )
+        }
         return (
             <Fragment>
                 <Helmet>
                     <title>EmojiQuiz summary</title>
                 </Helmet>
+                {stats}
             </Fragment>
         );
     }
