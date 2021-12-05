@@ -51,6 +51,8 @@ class Play extends Component {
         this.startTimer();
     }
 
+    
+
     displayQuestion= (questions = this.state.questions, currentQuestion, nextQuestion, previousQuestion) => {
         let {currentQuestionIndex} = this.state;
         if (!isEmpty(questions)) {
@@ -154,7 +156,11 @@ class Play extends Component {
             currentQuestionIndex: prevState.currentQuestionIndex + 1,
             numberOfAnsweredQuestions:prevState.numberOfAnsweredQuestions + 1,
         }), ()=> {
-            this.displayQuestion(this.state.questions, this.state.currentQuestion, this.state.nextQuestion, this.state.previousQuestion)
+            if (this.state.nextQuestion === undefined) {
+                this.endGame()
+            } else {
+                this.displayQuestion(this.state.questions, this.state.currentQuestion, this.state.nextQuestion, this.state.previousQuestion)
+            }
         }
         );
     }
