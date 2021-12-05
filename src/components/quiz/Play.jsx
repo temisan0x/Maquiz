@@ -43,19 +43,12 @@ class Play extends Component {
             time: {}
         };
         this.interval = null;
-        this.wrongSound = React.createRef();
-        this.correctSound = React.createRef();
-        this.buttonSound = React.createRef();
     }
 
     componentDidMount () {
         const {questions, currentQuestion, nextQuestion, previousQuestion}= this.state;
         this.displayQuestion(questions, currentQuestion, nextQuestion, previousQuestion);
         this.startTimer();
-    }
-
-    componentWillUnmount () {
-        clearInterval(this.interval);
     }
 
     displayQuestion= (questions = this.state.questions, currentQuestion, nextQuestion, previousQuestion) => {
@@ -161,11 +154,7 @@ class Play extends Component {
             currentQuestionIndex: prevState.currentQuestionIndex + 1,
             numberOfAnsweredQuestions:prevState.numberOfAnsweredQuestions + 1,
         }), ()=> {
-            if (this.state.nextQuestion === undefined) {
-                this.endGame();
-            } else {
-                this.displayQuestion(this.state.questions, this.state.currentQuestion, this.state.nextQuestion, this.state.previousQuestion)
-            }
+            this.displayQuestion(this.state.questions, this.state.currentQuestion, this.state.nextQuestion, this.state.previousQuestion)
         }
         );
     }
@@ -194,9 +183,9 @@ class Play extends Component {
         }), ()=> {
             // displays new state
             if (this.state.nextQuestion === undefined) {
-                this.endGame();
+                this.endGame()
             } else {
-            this.displayQuestion(this.state.questions, this.state.currentQuestion, this.state.nextQuestion, this.state.previousQuestion)
+                this.displayQuestion(this.state.questions, this.state.currentQuestion, this.state.nextQuestion, this.state.previousQuestion)
             }
         });
     }
@@ -302,8 +291,6 @@ class Play extends Component {
                         seconds: 0
                     }
                 }, () => {
-                    // alert('Quiz has ended');
-                    // this.props.history.push('/'); 
                     this.endGame();
                 });
             } else {
@@ -341,7 +328,7 @@ class Play extends Component {
     }
 
     endGame =()=> {
-        alert(`Quiz has ended`);
+        alert(`Emoji Quiz has ended`);
         const {state} = this;
         const playerStats = {
             score: state.score,
@@ -354,7 +341,7 @@ class Play extends Component {
         };
         console.log(playerStats);
         setTimeout(() => {
-            this.props.history.push('/');
+            this.props.history.push('/')
         }, 1000);
     }
 
@@ -371,9 +358,9 @@ class Play extends Component {
             <div className="backgroundColor">
                 <Helmet><title>Quiz Page</title></Helmet>
                 <Fragment>
-                    <audio ref={this.correctSound} src={correctNotifications}></audio>
-                    <audio ref={this.wrongSound} src={clickNotifications}></audio>
-                    <audio ref={this.buttonSound} src={wrongNotifications}></audio>
+                    <audio id="correct_sound" type="audio" src={correctNotifications}></audio>
+                    <audio id="button_sound" type="audio" src={clickNotifications}></audio>
+                    <audio id="wrong_sound" type="audio" src={wrongNotifications}></audio>
                 </Fragment>
                 <div className="questions">
                     <div className="question_header">
