@@ -22,7 +22,7 @@ class QuizSummary extends Component {
         if (state) {
             this.setState({
                 score: (state.score / state.numberOfQuestions) * 100,
-                numberOfQuestions: state.numberOfQuestions,
+                numberOfQuestions: state.numberOfQuestions - (state.correctAnswers + state.wrongAnswers),
                 numberOfAnsweredQuestions: state.numberOfAnsweredQuestions,
                 correctAnswers: state.correctAnswers,
                 wrongAnswers: state.wrongAnswers,
@@ -61,20 +61,20 @@ class QuizSummary extends Component {
                     <span className="stats left">Total number of questions: </span>
                     <span className="right">{this.state.numberOfQuestions}</span>
                     <br />
-                    <span className="stats left">Total number of questions: </span>
-                    <span className="right">{this.state.numberOfQuestions}</span>
+                    <span className="stats left">Total number of Attempted questions: </span>
+                    <span className="right">{this.state.numberOfAnsweredQuestions}</span>
                     <br />
-                    <span className="stats left">Total number of questions: </span>
-                    <span className="right">{this.state.numberOfQuestions}</span>
+                    <span className="stats left">Total number of Correct Answer: </span>
+                    <span className="right">{this.state.correctAnswers}</span>
                     <br />
-                    <span className="stats left">Total number of questions: </span>
-                    <span className="right">{this.state.numberOfQuestions}</span>
+                    <span className="stats left">Total number of Wrong Answer: </span>
+                    <span className="right">{this.state.wrongAnswers}</span>
                     <br />
-                    <span className="stats left">Total number of questions: </span>
-                    <span className="right">{this.state.numberOfQuestions}</span>
+                    <span className="stats left">Total number of Hint Used: </span>
+                    <span className="right">{this.state.hintsUsed}</span>
                     <br />
-                    <span className="stats left">Total number of questions: </span>
-                    <span className="right">{this.state.numberOfQuestions}</span>
+                    <span className="stats left">50 - 50 Used: </span>
+                    <span className="right">{this.state.fiftyFiftyUsed}</span>
                 </div>
                 <section>
                     <ul>

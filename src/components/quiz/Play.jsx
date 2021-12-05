@@ -160,7 +160,7 @@ class Play extends Component {
             });
 
         this.setState(prevState => ({
-            scores:prevState.score + 1,
+            score:prevState.score + 1,
             correctAnswers: prevState.correctAnswers + 1,
             currentQuestionIndex: prevState.currentQuestionIndex + 1,
             numberOfAnsweredQuestions:prevState.numberOfAnsweredQuestions + 1,
