@@ -72,13 +72,13 @@
         "optionD": "Tiana",
         "answer": "Moana",
         "emoji1": "https://emojipedia-us.s3.amazonaws.com/source/skype/289/hibiscus_1f33a.png",
-        "emoji2": "https://emojipedia-us.s3.dualstack.us-west-1.amazonaws.com/thumbs/120/joypixels/291/coconut_1f965.png",
+        "emoji2": "https://emojipedia-us.s3.amazonaws.com/source/skype/289/coconut_1f965.png",
         "emoji3": "https://emojipedia-us.s3.amazonaws.com/source/skype/289/water-wave_1f30a.png",
         "emoji4": "https://emojipedia-us.s3.amazonaws.com/source/skype/289/rooster_1f413.png"
     },
 
     {
-        "question": "Where is the smallest bone in the human body?",
+        "question": "What Cartoon might this be? ",
         "optionA": "Sheen",
         "optionB": "Jimmy Neutron",
         "optionC": "Soduim Chloride",
@@ -91,78 +91,41 @@
     },
 
     {
-        "question": "What does the roman numeral C represent?",
-        "optionA": "100",
-        "optionB": "10",
-        "optionC": "10,000",
-        "optionD": "1,000,000",
-        "answer": "100",
+        "question": "What show could this be? ",
+        "optionA": "Winnie the pooh",
+        "optionB": "Big Ben and friends",
+        "optionC": "Ted 2",
+        "optionD": "Archie",
+        "answer": "Winnie the pooh",
         "emoji1":"https://emojipedia-us.s3.amazonaws.com/source/skype/289/teddy-bear_1f9f8.png",
-        "emoji2":"https://emojipedia-us.s3.dualstack.us-west-1.amazonaws.com/thumbs/120/facebook/65/tiger_1f405.png",
-        "emoji3":"https://emojipedia-us.s3.dualstack.us-west-1.amazonaws.com/thumbs/120/whatsapp/314/kangaroo_1f998.png",
-        "emoji4":"https://emojipedia-us.s3.dualstack.us-west-1.amazonaws.com/thumbs/120/apple/285/owl_1f989.png"
+        "emoji2":"https://emojipedia-us.s3.amazonaws.com/source/skype/289/tiger_1f405.png",
+        "emoji3":"https://emojipedia-us.s3.amazonaws.com/source/skype/289/kangaroo_1f998.png",
+        "emoji4":"https://emojipedia-us.s3.amazonaws.com/source/skype/289/owl_1f989.png"
     },
 
     {
-        "question": "What takes place in Hong Kong's Happy Valley?",
+        "question": "And this?",
         "optionA": "Chicken Wrestling",
-        "optionB": "Horse racing",
-        "optionC": "Street Racing",
-        "optionD": "Arm Wrestling",
-        "answer": "Horse racing"
+        "optionB": "Little Red Riding Hood Story",
+        "optionC": "Snow White",
+        "optionD": "Ginger Bread Girl",
+        "answer": "Little Red Riding Hood Story",
+        "emoji1":"https://emojipedia-us.s3.dualstack.us-west-1.amazonaws.com/thumbs/120/softbank/145/girl_1f467.png",
+        "emoji2":"https://emojipedia-us.s3.dualstack.us-west-1.amazonaws.com/thumbs/120/whatsapp/314/basket_1f9fa.png",
+        "emoji3":"https://emojipedia-us.s3.dualstack.us-west-1.amazonaws.com/thumbs/120/microsoft/310/wolf_1f43a.png",
+        "emoji4":"https://emojipedia-us.s3.dualstack.us-west-1.amazonaws.com/thumbs/120/facebook/304/bread_1f35e.png"
     },
 
     {
-        "question": "Who painted the Mona Lisa?",
-        "optionA": "Alexander Graham Bell",
-        "optionB": "Sir Isaac Newton",
-        "optionC": "Leonardo Da Vinci",
-        "optionD": "Albert Einstein",
-        "answer": "Leonardo Da Vinci"
-    },
-
-    {
-        "question": "What’s the most important book in the Moslem religion?",
-        "optionA": "The Koran",
-        "optionB": "The Dictionary",
-        "optionC": "The Bible",
-        "optionD": "The Chemistry text Book",
-        "answer": "The Koran"
-    },
-
-    {
-        "question": "What’s the capital of Ethiopia?",
-        "optionA": "Cape Town",
-        "optionB": "Addis Ababa",
-        "optionC": "Abuja",
-        "optionD": "Syndey",
-        "answer": "Addis Ababa"
-    },
-
-    {
-        "question": "How many squares are there on a chess board?",
-        "optionA": "128",
-        "optionB": "64",
-        "optionC": "32",
-        "optionD": "256",
-        "answer": "64"
-    },
-
-    {
-        "question": "Who invented the electric light bulb?",
-        "optionA": "Tom Cruise",
-        "optionB": "Barack Obama",
-        "optionC": "Wole Soyinka",
-        "optionD": "Thomas Edison",
-        "answer": "Thomas Edison"
-    },
-
-    {
-        "question": "What are the first three words of the bible?",
-        "optionA": "be with everyone",
-        "optionB": "Again Jesus asked",
-        "optionC": "In the beginning",
-        "optionD": "At that time",
-        "answer": "In the beginning"
+        "question": "Which devilishly good team is this?",
+        "optionA": "Manchester City",
+        "optionB": "Chelsea",
+        "optionC": "Manchester Utd",
+        "optionD": "Liverpool",
+        "answer": "Manchester Utd",
+        "emoji1":"https://emojipedia-us.s3.dualstack.us-west-1.amazonaws.com/thumbs/120/lg/307/large-red-circle_1f534.png",
+        "emoji2":"https://emojipedia-us.s3.dualstack.us-west-1.amazonaws.com/thumbs/120/emojidex/112/smiling-face-with-horns_1f608.png",
+        "emoji3":"https://emojipedia-us.s3.dualstack.us-west-1.amazonaws.com/thumbs/120/lg/307/large-red-circle_1f534.png",
+        "emoji4":"https://emojipedia-us.s3.dualstack.us-west-1.amazonaws.com/thumbs/120/emojidex/112/smiling-face-with-horns_1f608.png"
     }
 ]

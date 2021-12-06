@@ -118,7 +118,7 @@ class Play extends Component {
     handleQuitButtonClick = () => {
         this.playButtonSound();
         window.confirm('Are you sure you want to quit the quiz 😥')
-        this.props.history.push('/')
+            this.props.history.push('/')
     }
 
     handleButtonClick = (e) => {
