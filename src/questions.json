@@ -39,42 +39,55 @@
     },
 
     {
-        "question": "Which is the only mammal that can’t jump?",
-        "optionA": "Dog",
-        "optionB": "Elephant",
-        "optionC": "Goat",
-        "optionD": "Lion",
-        "answer": "Elephant",
+        "question": " What's the name of this Fab Four? ",
+        "optionA": "The Ants",
+        "optionB": "The Beatles",
+        "optionC": "Bug Life",
+        "optionD": "Creepy Crawlies",
+        "answer": "The Beatles",
         "emoji1": "https://emojipedia-us.s3.dualstack.us-west-1.amazonaws.com/thumbs/120/apple/285/beetle_1fab2.png",
         "emoji2": "https://emojipedia-us.s3.dualstack.us-west-1.amazonaws.com/thumbs/120/apple/285/beetle_1fab2.png",
-        
-    }
-
-    {
-        "question": "Who lived at 221B, Baker Street, London?",
-        "optionA": "Tony Stark",
-        "optionB": "Morgan Freeman",
-        "optionC": "Sherlock Holmes",
-        "optionD": "Samuel L. Jackson",
-        "answer": "Sherlock Holmes"
+        "emoji3": "https://emojipedia-us.s3.dualstack.us-west-1.amazonaws.com/thumbs/120/apple/285/beetle_1fab2.png",
+        "emoji4": "https://emojipedia-us.s3.dualstack.us-west-1.amazonaws.com/thumbs/120/apple/285/beetle_1fab2.png"
     },
 
     {
-        "question": "What colour is a panda?",
-        "optionA": "Green and Yellow",
-        "optionB": "Blue and Red",
-        "optionC": "Green and White",
-        "optionD": "Black and White",
-        "answer": "Black and White"
+        "question": "Name this boy band for one final point!",
+        "optionA": "Arrows",
+        "optionB": "Pointing Forward",
+        "optionC": "One Direction",
+        "optionD": "Road Signz",
+        "answer": "One Direction",
+        "emoji1": "https://emojipedia-us.s3.dualstack.us-west-1.amazonaws.com/thumbs/120/facebook/65/north-east-arrow_2197.png",
+        "emoji2": "https://emojipedia-us.s3.dualstack.us-west-1.amazonaws.com/thumbs/120/facebook/65/north-east-arrow_2197.png",
+        "emoji3": "https://emojipedia-us.s3.dualstack.us-west-1.amazonaws.com/thumbs/120/facebook/65/north-east-arrow_2197.png",
+        "emoji4": "https://emojipedia-us.s3.dualstack.us-west-1.amazonaws.com/thumbs/120/facebook/65/north-east-arrow_2197.png"
+    },
+
+    {
+        "question": " Which Disney character could this be? ",
+        "optionA": "Ariel",
+        "optionB": "Rapunzel",
+        "optionC": "Moana",
+        "optionD": "Tiana",
+        "answer": "Moana",
+        "emoji1": "https://emojipedia-us.s3.amazonaws.com/source/skype/289/hibiscus_1f33a.png",
+        "emoji2": "https://emojipedia-us.s3.dualstack.us-west-1.amazonaws.com/thumbs/120/joypixels/291/coconut_1f965.png",
+        "emoji3": "https://emojipedia-us.s3.amazonaws.com/source/skype/289/water-wave_1f30a.png",
+        "emoji4": "https://emojipedia-us.s3.amazonaws.com/source/skype/289/rooster_1f413.png"
     },
 
     {
         "question": "Where is the smallest bone in the human body?",
-        "optionA": "The Chest",
-        "optionB": "The Ear",
-        "optionC": "The Legs",
-        "optionD": "The Hands",
-        "answer": "The Ear"
+        "optionA": "Sheen",
+        "optionB": "Jimmy Neutron",
+        "optionC": "Soduim Chloride",
+        "optionD": "dexter's laboratory ",
+        "answer": "Jimmy Neutron",
+        "emoji1":"https://emojipedia-us.s3.dualstack.us-west-1.amazonaws.com/thumbs/120/whatsapp/314/rocket_1f680.png",
+        "emoji2":"https://emojipedia-us.s3.dualstack.us-west-1.amazonaws.com/thumbs/120/facebook/304/robot_1f916.png",
+        "emoji3":"https://emojipedia-us.s3.dualstack.us-west-1.amazonaws.com/thumbs/120/google/313/test-tube_1f9ea.png",
+        "emoji4":"https://emojipedia-us.s3.dualstack.us-west-1.amazonaws.com/thumbs/120/apple/285/telescope_1f52d.png"
     },
 
     {
@@ -83,7 +96,11 @@
         "optionB": "10",
         "optionC": "10,000",
         "optionD": "1,000,000",
-        "answer": "100"
+        "answer": "100",
+        "emoji1":"https://emojipedia-us.s3.amazonaws.com/source/skype/289/teddy-bear_1f9f8.png",
+        "emoji2":"https://emojipedia-us.s3.dualstack.us-west-1.amazonaws.com/thumbs/120/facebook/65/tiger_1f405.png",
+        "emoji3":"https://emojipedia-us.s3.dualstack.us-west-1.amazonaws.com/thumbs/120/whatsapp/314/kangaroo_1f998.png",
+        "emoji4":"https://emojipedia-us.s3.dualstack.us-west-1.amazonaws.com/thumbs/120/apple/285/owl_1f989.png"
     },
 
     {
