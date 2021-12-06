@@ -1,7 +1,7 @@
 .instructions {
     background-color: #29292c;
     color: aliceblue;
-    font-family: 'MillimetreRegular'; 
+    font-family: 'JelleeBold';
     border-bottom-left-radius: 20px;
     border-bottom-right-radius: 20px;
 }
@@ -21,7 +21,7 @@
     overflow: hidden;
     font-size: 15px;
     font-weight: 800;
-    font-family: 'MillimetreRegular'; 
+    font-family: 'JelleeBold';
     padding-left: 0px;
     padding-right: 10px;
     line-height: 3;
@@ -152,28 +152,6 @@ top: 16px;
     z-index: 3;
     position: relative;
     font-weight: 600;
-}
-
-.quiz_summary {
-    line-height: 4;
-
-}
-
-.quiz_summary h2, h1{
-    font-weight: 800;
-} 
-
-.quiz_summary span {
-    font-size: 1rem;
-    font-weight: 600;
-}
-
-.summary_right {
-    float: right;
-}
-
-.summary_left {
-    float: left;
 }
 
 @media (max-width: 768px) {

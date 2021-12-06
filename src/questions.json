@@ -1,22 +1,22 @@
 [
     {
-        "question": "What is one reason that many cats seem fearful of water?",
-        "optionA": "cats evolved in snowy climates ",
-        "optionB": "wet fur takes too long to dry",
-        "optionC": "cats can swim, but don’t like to",
-        "optionD": "cats can’t swim",
-        "answer": "wet fur takes too long to dry",
-        "emoji": "😀"
+        "question": "Which Emoji does this character denote",
+        "optionA": "grinning squinting face ",
+        "optionB": "slightly smiling face",
+        "optionC": "grinning face",
+        "optionD": "smiling face with smiling eyes",
+        "answer": "smiling face with smiling eyes",
+        "url": "https://emojipedia-us.s3.amazonaws.com/source/skype/289/smiling-face-with-smiling-eyes_1f60a.png"
     },
 
     {
         "question": "Who wrote Julius Caesar, Macbeth and Hamlet?",
-        "optionA": "Wole Soyinka",
-        "optionB": "William Shakespeare",
-        "optionC": "Ngozi Chimamanda Adichie",
-        "optionD": "Dan Brown",
-        "answer": "William Shakespeare",
-        "emoji": "😀"
+        "optionA": "Gasping Face",
+        "optionB": "Astonished Face",
+        "optionC": " Shocked Face",
+        "optionD": " Drunk Face",
+        "answer": "Astonished Face",
+        "url": "https://emojipedia-us.s3.amazonaws.com/source/skype/289/astonished-face_1f632.png"
     },
 
     {
@@ -26,7 +26,7 @@
         "optionC": "A pair of shoes",
         "optionD": "Alarm Clock",
         "answer": "Alarm Clock",
-        "emoji": "😀"
+        "url": "https://emojipedia-us.s3.amazonaws.com/source/skype/289/smiling-face-with-smiling-eyes_1f60a.png"
     },
 
     {
@@ -36,7 +36,7 @@
         "optionC": "Goat",
         "optionD": "Lion",
         "answer": "Elephant",
-        "emoji": "😀"
+        "url": "https://emojipedia-us.s3.amazonaws.com/source/skype/289/smiling-face-with-smiling-eyes_1f60a.png"
     },
 
     {

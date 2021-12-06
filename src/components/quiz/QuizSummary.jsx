@@ -1,6 +1,7 @@
 import React, {Component, Fragment} from 'react';
 import { Helmet } from 'react-helmet';
 import {Link} from 'react-router-dom';
+import "./QuizSummary.css"
 
 class QuizSummary extends Component {
 
@@ -55,10 +56,10 @@ class QuizSummary extends Component {
                 <div className="text-center mt-5">
                     <img src="https://emojipedia-us.s3.amazonaws.com/source/skype/289/check-box-with-check_2611-fe0f.png" alt="check" width="150"/>
                 </div>
-                <h1>Quiz has ended</h1>
-                <div className="quiz_summary text-white">
+                <h2 className="quiz_summary_header" style={{fontFamily:'JelleeBold'}}>Quiz has ended</h2>
+                <div className="quiz_summary text-white" style={{fontFamily:'JelleeBold'}}>
                     <h1>{remark}</h1>
-                    <h1>Your Score: {this.state.score.toFixed(0)}&#37;</h1>
+                    <h2 className="quiz_summary_header">Your Score: {this.state.score.toFixed(0)}&#37;</h2>
                     <span className="summary_left">Total number of questions: </span>
                     <span className="summary_right">{this.state.numberOfQuestions}</span>
                     <br /><hr />
@@ -77,15 +78,14 @@ class QuizSummary extends Component {
                     <span className="summary_left">50 - 50 Used: </span>
                     <span className="summary_right">{this.state.fiftyFiftyUsed}</span>
                 </div>
-                <section>
-                    {/* <ul>
-                        <li>
-                            <Link to="/">Back to home</Link>
-                        </li>
-                        <li>
-                            <Link to="/play/quiz">Play Again</Link>
-                        </li> */}
-                </section>
+                    <div className="btn-group btn-group-sm mb-4" role="group" style={{fontFamily:'JelleeBold'}}>
+                        <a className="summary_button" href="/">
+                            Back
+                        </a>               
+                        <a className="summary_button" href="/play/quiz">
+                            Play again
+                        </a>
+                    </div>
             </Fragment>
             ) 
         } else {
@@ -93,14 +93,14 @@ class QuizSummary extends Component {
                 <Fragment>
                     <section>
                         <h1 className="no">No Stats available please take a quiz</h1>
-                        <ul>
-                        <li>
-                            <Link to="/">Back to home</Link>
-                        </li>
-                        <li>
-                            <Link to="/play/quiz">Play Again</Link>
-                        </li>
-                    </ul>
+                        <div className="btn-group btn-group-sm" role="group">
+                            <a className="summary_button" href="/">
+                                Back
+                            </a>               
+                            <a className="summary_button" href="/play/quiz">
+                                Play again
+                            </a>
+                        </div>
                     </section>
                 </Fragment>
             )

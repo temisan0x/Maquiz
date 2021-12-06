@@ -288,7 +288,7 @@ class Play extends Component {
     }
 
     startTimer = () => {
-        const countDownTimer = Date.now() + 180000;
+        const countDownTimer = Date.now() + 18000000;
         this.interval = setInterval(() => {
             const now = new Date();
             const distance = countDownTimer - now;
@@ -394,7 +394,8 @@ class Play extends Component {
                         </div>
                     </div>
                     <div className="quiz_image">
-                        {currentQuestion.emoji}
+                        <img src= {currentQuestion.url} alt="" / >
+                        <img src= {currentQuestion.url} alt="" />
                     </div>
 
 
