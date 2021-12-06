@@ -394,11 +394,11 @@ class Play extends Component {
                         </div>
                     </div>
                     <div className="quiz_image">
-                        <img src= {currentQuestion.url} alt="" / >
-                        <img src= {currentQuestion.url} alt="" />
+                        <img src= {currentQuestion.emoji1} alt="" className="quiz_img"/ >
+                        <img src= {currentQuestion.emoji2} alt="" className="quiz_img"/>
+                        <img src= {currentQuestion.emoji3} alt="" className="quiz_img"/ >
+                        <img src= {currentQuestion.emoji4} alt="" className="quiz_img"/>
                     </div>
-
-
                     <div className="question_section">
                         <div className="numberOfQuestions" style={{float:'left'}}>
                             <span>question     </span>
@@ -406,7 +406,7 @@ class Play extends Component {
                         </div> 
                         <h5 className="question_">{currentQuestion.question}</h5>
                     </div>
-                    <hr /><br />
+                    <hr /><br className="break"/>
                     <div className="options_container">
                         <p onClick={this.handleOptionClick}  className="option">{currentQuestion.optionA}</p>
                         <p onClick={this.handleOptionClick} className="option">{currentQuestion.optionB}</p>

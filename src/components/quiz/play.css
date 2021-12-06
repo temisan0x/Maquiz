@@ -27,9 +27,9 @@
 .quiz_bold {
     font-size: 1.5rem;
     font-weight: 900;
-    color: #EB5757;  /* fallback for old browsers */
-    color: -webkit-linear-gradient(to right, #000000, #EB5757);  /* Chrome 10-25, Safari 5.1-6 */
-    color: linear-gradient(to right, #000000, #EB5757); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    color: #EB5757; 
+    color: -webkit-linear-gradient(to right, #000000, #EB5757);
+    color: linear-gradient(to right, #000000, #EB5757);
     font-family: 'AmburegulRegular'!important;
     font-weight: normal;
     font-style: normal; 
@@ -49,9 +49,8 @@
 .quiz_timer {
     font-size: 2rem;
     font-weight: 900;
-    color: #FFE000; /* fall
-    color: -webkit-linear-gradient(to right, #FFE000, #799F0C, #00416A);  /* Chrome 10-25, Safari 5.1-6 */
-    color: linear-gradient(to right, #FFE000, #799F0C, #00416A); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    color: #FFE000; 
+    color: linear-gradient(to right, #FFE000, #799F0C, #00416A);
 }
 
 .icon {
@@ -67,9 +66,9 @@
 
 /* Darker background on mouse-over */
 .btn:hover {
-    color: #9d2626;  /* fallback for old browsers */
-    color: -webkit-linear-gradient(to right, #000000, #EB5757);  /* Chrome 10-25, Safari 5.1-6 */
-    color: linear-gradient(to right, #000000, #EB5757); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    color: #9d2626; 
+    color: -webkit-linear-gradient(to right, #000000, #EB5757);
+    color: linear-gradient(to right, #000000, #EB5757);
 }
 
 .lifeline_container {
@@ -120,25 +119,25 @@ h5{
 
 .option {
 
-    background: #D3959B;  /* fallback for old browsers */
-background: -webkit-linear-gradient(to right, #BFE6BA, #D3959B);  /* Chrome 10-25, Safari 5.1-6 */
-background: linear-gradient(to right, #BFE6BA, #D3959B); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
-
+    background: #D3959B; 
+    background: -webkit-linear-gradient(to right, #BFE6BA, #D3959B);
+    background: linear-gradient(to right, #BFE6BA, #D3959B);
+    padding: 7px;
     border-radius: 30px;
-    color: #ad5389;  /* fallback for old browsers */
-    color: -webkit-linear-gradient(to right, #3c1053, #ad5389);  /* Chrome 10-25, Safari 5.1-6 */
+    color: #ad5389; 
+    color: -webkit-linear-gradient(to right, #3c1053, #ad5389);
     color: linear-gradient(to right, #3c1053, #ad5389); 
     cursor: pointer;
     margin: 1rem 0.6rem;
-    padding: 0.8rem;
+    /* padding: 0.8rem; */
     transition: 0.3s linear all;
     text-align: center;
 }
 
 .option:hover {
-    background: #F7971E;  /* fallback for old browsers */
-    background: -webkit-linear-gradient(to right, #FFD200, #F7971E);  /* Chrome 10-25, Safari 5.1-6 */
-    background: linear-gradient(to right, #FFD200, #F7971E); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    background: #F7971E; 
+    background: -webkit-linear-gradient(to right, #FFD200, #F7971E);
+    background: linear-gradient(to right, #FFD200, #F7971E);
 }
 
 .button_container {
@@ -174,30 +173,30 @@ background: linear-gradient(to right, #BFE6BA, #D3959B); /* W3C, IE 10+/ Edge, F
 }
 
 #previous_button {
-    background: #2C3E50;  /* fallback for old browsers */
-background: -webkit-linear-gradient(to right, #FD746C, #2C3E50);  /* Chrome 10-25, Safari 5.1-6 */
-background: linear-gradient(to right, #FD746C, #2C3E50); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    background: #2C3E50; 
+background: -webkit-linear-gradient(to right, #FD746C, #2C3E50);
+background: linear-gradient(to right, #FD746C, #2C3E50);
 
 }
 
 #previous_button:hover {
-    background: #2C3E50;  /* fallback for old browsers */
-    background: -webkit-linear-gradient(to right, #FD746C, #2C3E50);  /* Chrome 10-25, Safari 5.1-6 */
-    background: linear-gradient(to right, #FD746C, #2C3E50); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    background: #2C3E50; 
+    background: -webkit-linear-gradient(to right, #FD746C, #2C3E50);
+    background: linear-gradient(to right, #FD746C, #2C3E50);
     color: black;
 }
 
 #next_button {
-    background: #52c234;  /* fallback for old browsers */
-    background: -webkit-linear-gradient(to right, #061700, #52c234);  /* Chrome 10-25, Safari 5.1-6 */
-    background: linear-gradient(to right, #061700, #52c234); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    background: #52c234; 
+    background: -webkit-linear-gradient(to right, #061700, #52c234);
+    background: linear-gradient(to right, #061700, #52c234);
 
 }
 
 #next_button:hover {
-    background: #52c234;  /* fallback for old browsers */
-    background: -webkit-linear-gradient(to right, #061700, #52c234);  /* Chrome 10-25, Safari 5.1-6 */
-    background: linear-gradient(to right, #061700, #52c234); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    background: #52c234; 
+    background: -webkit-linear-gradient(to right, #061700, #52c234);
+    background: linear-gradient(to right, #061700, #52c234);
     color:black;
 }
 
@@ -228,6 +227,10 @@ background: linear-gradient(to right, #FD746C, #2C3E50); /* W3C, IE 10+/ Edge, F
         display:flex 
     }
 
+    .quiz_img {
+        width: 2rem;
+    }
+
     .icon {
         font-size: 0.9rem;
         border: 2px solid white;
@@ -236,7 +239,7 @@ background: linear-gradient(to right, #FD746C, #2C3E50); /* W3C, IE 10+/ Edge, F
     }
 
     .lifeline_icon {
-        font-size: 1.3rem;
+        font-size: 1.04rem;
     }
 
     .quiz_timer {
@@ -254,19 +257,24 @@ background: linear-gradient(to right, #FD746C, #2C3E50); /* W3C, IE 10+/ Edge, F
         margin-top: 20px;
     }
 
-    .quiz_image {
-        margin-top: 40px;
-        /* font-size: 50px; */
-    } 
-
     .option {
         height: 36px;
     }
 
     .quiz_image {
-        font-size: 2.5rem;
+        margin-top: 40px;
+        margin-bottom: 40px;
     }
+
+    .quiz_img {
+        width: 3.8rem;
+    }
+
     .quiz_timer {
         font-size: 1.5rem;
+    }
+
+    .break {
+        display:none;
     }
 }

@@ -1,32 +1,41 @@
 [
     {
-        "question": "Which Emoji does this character denote",
-        "optionA": "grinning squinting face ",
-        "optionB": "slightly smiling face",
-        "optionC": "grinning face",
-        "optionD": "smiling face with smiling eyes",
-        "answer": "smiling face with smiling eyes",
-        "url": "https://emojipedia-us.s3.amazonaws.com/source/skype/289/smiling-face-with-smiling-eyes_1f60a.png"
+        "question": " Which movie is this? ",
+        "optionA": "The Lion King",
+        "optionB": "Sleeping Beauty",
+        "optionC": "Beauty and the Beast",
+        "optionD": "Snow White",
+        "answer": "Beauty and the Beast",
+        "emoji1": "https://emojipedia-us.s3.amazonaws.com/source/skype/289/lion_1f981.png",
+        "emoji2": "https://emojipedia-us.s3.amazonaws.com/source/skype/289/wilted-flower_1f940.png",
+        "emoji3": "https://emojipedia-us.s3.amazonaws.com/source/skype/289/candle_1f56f-fe0f.png",
+        "emoji4": "https://emojipedia-us.s3.amazonaws.com/source/skype/289/mantelpiece-clock_1f570-fe0f.png"
     },
 
     {
-        "question": "Who wrote Julius Caesar, Macbeth and Hamlet?",
-        "optionA": "Gasping Face",
-        "optionB": "Astonished Face",
-        "optionC": " Shocked Face",
-        "optionD": " Drunk Face",
-        "answer": "Astonished Face",
-        "url": "https://emojipedia-us.s3.amazonaws.com/source/skype/289/astonished-face_1f632.png"
+        "question": " Which cartoon character might this represent? ",
+        "optionA": "Mickey Mouse",
+        "optionB": "Homer Simpson",
+        "optionC": "SpongeBob SquarePants",
+        "optionD": " Snoopy",
+        "answer": "SpongeBob SquarePants",
+        "emoji1": "https://emojipedia-us.s3.dualstack.us-west-1.amazonaws.com/thumbs/120/google/313/sponge_1f9fd.png",
+        "emoji2": "https://emojipedia-us.s3.dualstack.us-west-1.amazonaws.com/thumbs/120/openmoji/292/shorts_1fa73.png",
+        "emoji3": "https://emojipedia-us.s3.dualstack.us-west-1.amazonaws.com/thumbs/120/joypixels/291/pineapple_1f34d.png",
+        "emoji4": "https://emojipedia-us.s3.dualstack.us-west-1.amazonaws.com/thumbs/120/emojidex/112/snail_1f40c.png"
     },
 
     {
-        "question": "What did the crocodile swallow in Peter Pan?",
-        "optionA": "A Book",
-        "optionB": "A Computer",
-        "optionC": "A pair of shoes",
-        "optionD": "Alarm Clock",
-        "answer": "Alarm Clock",
-        "url": "https://emojipedia-us.s3.amazonaws.com/source/skype/289/smiling-face-with-smiling-eyes_1f60a.png"
+        "question": "This one seems fairly straightforward. Or is it?",
+        "optionA": "Monkey Trio",
+        "optionB": "Apes",
+        "optionC": "Gorillaz",
+        "optionD": "Primative Collective",
+        "answer": "Gorillaz",
+        "emoji1":"https://emojipedia-us.s3.dualstack.us-west-1.amazonaws.com/thumbs/120/emojidex/112/gorilla_1f98d.png",
+        "emoji2":"https://emojipedia-us.s3.dualstack.us-west-1.amazonaws.com/thumbs/120/facebook/304/gorilla_1f98d.png",
+        "emoji3":"https://emojipedia-us.s3.dualstack.us-west-1.amazonaws.com/thumbs/120/whatsapp/314/gorilla_1f98d.png",
+        "emoji4":"https://emojipedia-us.s3.dualstack.us-west-1.amazonaws.com/thumbs/120/apple/285/gorilla_1f98d.png"
     },
 
     {
@@ -36,8 +45,10 @@
         "optionC": "Goat",
         "optionD": "Lion",
         "answer": "Elephant",
-        "url": "https://emojipedia-us.s3.amazonaws.com/source/skype/289/smiling-face-with-smiling-eyes_1f60a.png"
-    },
+        "emoji1": "https://emojipedia-us.s3.dualstack.us-west-1.amazonaws.com/thumbs/120/apple/285/beetle_1fab2.png",
+        "emoji2": "https://emojipedia-us.s3.dualstack.us-west-1.amazonaws.com/thumbs/120/apple/285/beetle_1fab2.png",
+        
+    }
 
     {
         "question": "Who lived at 221B, Baker Street, London?",
