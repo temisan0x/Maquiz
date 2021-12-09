@@ -376,7 +376,7 @@ class Play extends Component {
                 </Fragment>
                 <div className="questions">
                     <div className="question_header">
-                        <div className="btn quiz_bold" id="quit_button"type="button"  onClick={this.handleButtonClick } >
+                        <div className="quiz_bold" id="quit_button"type="button"  onClick={this.handleButtonClick } >
                             X
                         </div>
                         <div className="quiz_timer">
@@ -405,8 +405,7 @@ class Play extends Component {
                             <span>{currentQuestionIndex + 1} of {numberOfQuestions}</span>
                         </div> 
                         <h5 className="question_">{currentQuestion.question}</h5>
-                    </div>
-                    <hr /><br className="break"/>
+                    </div><br/>
                     <div className="options_container">
                         <p onClick={this.handleOptionClick}  className="option">{currentQuestion.optionA}</p>
                         <p onClick={this.handleOptionClick} className="option">{currentQuestion.optionB}</p>
