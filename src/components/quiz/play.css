@@ -42,6 +42,18 @@
     align-items: center;
 }
 
+.question_section {
+    width: 100%;
+}
+
+.numberOfQuestions {
+    width: 20%;
+}
+
+.question_ {
+    width: 80%;
+}
+
 .right {
     margin-right:5px;
 }
@@ -169,7 +181,13 @@ h5{
     justify-content: space-evenly;
     align-items: baseline;
     margin-top: 38px;
-    /* font-size: 100px; */
+    flex-wrap: wrap;
+    font-size: 100px;
+    
+}
+
+.quiz_img {
+    width: 120px;
 }
 
 #previous_button {
@@ -248,15 +266,20 @@ background: linear-gradient(to right, #FD746C, #2C3E50);
     }
 
     .question_section {
+        width: 100%;
         display: flex;
         flex-direction: column;
         height: 100px;
     }
-
+    
+    .numberOfQuestions {
+        width: 50%;
+    }
+    
     .question_ {
         margin-top: 20px;
+        width: 100%;
     }
-
     .option {
         height: 36px;
     }
