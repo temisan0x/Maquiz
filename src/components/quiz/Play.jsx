@@ -377,7 +377,7 @@ class Play extends Component {
                 <div className="questions">
                     <div className="question_header">
                         <div className="quiz_bold" id="quit_button"type="button"  onClick={this.handleButtonClick } >
-                            X
+                            Cancel
                         </div>
                         <div className="quiz_timer">
                             <span>{time.minutes}:{time.seconds} <span>
@@ -406,11 +406,11 @@ class Play extends Component {
                         </div> 
                         <h5 className="question_">{currentQuestion.question}</h5>
                     </div><br/>
-                    <div className="options_container">
+                    <div className="options_container" id="rotate-animation">
                         <p onClick={this.handleOptionClick}  className="option">{currentQuestion.optionA}</p>
                         <p onClick={this.handleOptionClick} className="option">{currentQuestion.optionB}</p>
                     </div>
-                    <div className="options_container">
+                    <div className="options_container" id="rotate-animation">
                     <p onClick={this.handleOptionClick} className="option">{currentQuestion.optionC}</p>
                     <p onClick={this.handleOptionClick} className="option">{currentQuestion.optionD}</p>
                     </div>
