@@ -8,15 +8,16 @@ import QuizSummary from './components/quiz/QuizSummary.jsx';
 
 function App() {  
     return (
-    <div className="container">
-        <Router>    
-            <Route path="/" exact component={Home} />
-            <Route path="/play/instructions" exact component={QuizInstruction} />
-            <Route path="/play/quiz" exact component={Play} />
-            <Route path="/Play/quiz/summary" exact component={QuizSummary}/>
-        </Router>  
-        
-    </div>
+    <>
+        <div className="container">
+            <Router>    
+                <Route path="/" exact component={Home} />
+                <Route path="/play/instructions" exact component={QuizInstruction} />
+                <Route path="/play/quiz" exact component={Play} />
+                <Route path="/Play/quiz/summary" exact component={QuizSummary}/>
+            </Router>       
+        </div>
+    </>
     )
 }
 

@@ -1,6 +1,7 @@
 import React, {Component, Fragment} from 'react';
 import { Helmet } from 'react-helmet';
-import "./QuizSummary.css"
+import "./QuizSummary.css";
+import {Link} from "react-router-dom";
 
 class QuizSummary extends Component {
 
@@ -78,12 +79,16 @@ class QuizSummary extends Component {
                     <span className="summary_right">{this.state.fiftyFiftyUsed}</span>
                 </div>
                     <div className="btn-group btn-group-sm mb-4" role="group" style={{fontFamily:'JelleeBold'}}>
-                        <a className="summary_button" href="/">
-                            Back
-                        </a>               
-                        <a className="summary_button" href="/play/quiz">
-                            Play again
-                        </a>
+                        <Link to="/">
+                            <div className="btn btn-primary">
+                                Back
+                            </div>
+                        </Link>           
+                        <Link to="/play/quiz">
+                            <div className="btn btn-success">
+                                Play Again
+                            </div>
+                        </Link>
                     </div>
             </Fragment>
             ) 
@@ -93,12 +98,16 @@ class QuizSummary extends Component {
                     <section>
                         <h1 className="no">No Stats available please take a quiz</h1>
                         <div className="btn-group btn-group-sm" role="group">
-                            <a className="summary_button" href="/">
-                                Back
-                            </a>               
-                            <a className="summary_button" href="/play/quiz">
-                                Play again
-                            </a>
+                            <Link to="/">
+                                <div className="btn btn-primary">
+                                    Back
+                                </div>
+                            </Link>
+                            <Link to="/play/quiz">
+                                <div className="btn btn-success">
+                                    Play Again
+                                </div>
+                            </Link>
                         </div>
                     </section>
                 </Fragment>
