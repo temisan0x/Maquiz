@@ -17,10 +17,8 @@ const Home = () => (
                 <h1>Emoji Quiz App</h1>
                 <div className="play-button-container">
                     <div>
-                        <Link to="/play/quiz" className="button-53" role="button">Button 53</Link>
-                        <Link to="/play/instructions" className="button-54">
-                            hello    
-                        </Link> 
+                        <Link to="/play/quiz" className="button-53" role="button">Play</Link>
+                        <Link to="/play/instructions" className="button-54">Instructions</Link> 
                     </div>
                     <br />
                 </div>

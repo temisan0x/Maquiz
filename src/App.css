@@ -275,6 +275,10 @@ bottom: 2px;
 left: 2px;
 }
 
+a:hover {
+    color: white !important;
+}
+
 @media (min-width: 768px) {
 .button-53 {
 padding: .75rem 3rem;
