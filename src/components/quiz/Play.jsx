@@ -98,7 +98,7 @@ class Play extends Component {
             this.setState(prevState => ({
                 currentQuestionIndex : prevState.currentQuestionIndex + 1
             }), () => {
-                this.displayQuestion(this.state , this.state.currentQuestion, this.state.nextQuestion, this.state.previousQuestion);
+                this.displayQuestion(this.state , Math.floor(Math.random() * [this.state.currentQuestion, this.state.nextQuestion, this.state.previousQuestion]);
             });
         }
     }
